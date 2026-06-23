@@ -412,7 +412,7 @@
           status: "Completed",
           image: "assets/creamcraft.jpg",
           overviewText:
-            "<p>CreamCraft was a forward-looking Minecraft Skyblock network.</p>",
+            "<p>CreamCraft was a forward-looking Minecraft Skyblock network. Here we provide customized features, specialized plugins, and an immersive user experience tailored to dedicated gamers.</p>",
           delivered: [],
         },
         {
@@ -427,7 +427,7 @@
           status: "Completed",
           image: "assets/zaydex.jpg",
           overviewText:
-            "<p>Comprehensive setup and management of a modern e-commerce brand.</p>",
+            "<p>Comprehensive setup and management of a modern e-commerce brand. We handled everything from initial UI/UX design to continuous marketing strategies and Shopify integration.</p>",
           delivered: [],
         },
         {
@@ -442,7 +442,7 @@
           status: "Completed",
           image: "assets/lumina.jpg",
           overviewText:
-            "<p>Lumina was built to put the focus entirely on the creator's work.</p>",
+            "<p>Lumina was built to put the focus entirely on the creator's work. Featuring smooth animations via Framer Motion and an optimized React architecture for fast loading times.</p>",
           delivered: [],
         },
       ];
@@ -516,17 +516,41 @@
       function openProject(projectId) {
         const project = portfolioData.find((p) => p.id === projectId);
         if (!project) return;
+
+        /* 
+          Yahan detail page ka naya layout set kar diya gaya hai. 
+          Isme left side par title aur detailed overview text hoga, 
+          aur right side par wahi picture show hogi jo card pe lagti hai. 
+        */
         detailView.innerHTML = `
           <button onclick="closeProject()" style="display: flex; align-items: center; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text, #fff); padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 40px; font-size: 0.9rem;">
             < Back to Work
           </button>
+          
           <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 60px;">
+            <!-- Left Side: Detailed Text -->
             <div style="flex: 1 1 500px;">
-              <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">${project.title}</h1>
-              <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 32px;">${project.shortDesc}</p>
+              <h1 style="font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">${project.title}</h1>
+              <div style="color: #34d399; font-weight: 600; margin-bottom: 24px; font-size: 1.1rem;">
+                ${project.projectType} • ${project.year}
+              </div>
+              <div style="font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 32px;">
+                ${project.overviewText}
+              </div>
+            </div>
+            
+            <!-- Right Side: Image -->
+            <div style="flex: 1 1 400px;">
+              <!-- Yahan apki picture show hogi -->
+              <img 
+                src="${project.image || ""}" 
+                alt="${project.title}" 
+                style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); object-fit: cover;" 
+              />
             </div>
           </div>
         `;
+
         mainView.style.display = "none";
         detailView.style.display = "block";
         window.scrollTo(0, 0);
