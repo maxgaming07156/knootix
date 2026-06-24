@@ -313,7 +313,7 @@
           "
         >
           <span style="font-size: 0.95rem; color: var(--accent-green)"
-            >We are currently working on 6 exciting projects behind the
+            >We are currently working on 10 exciting projects behind the
             scenes</span
           >
         </div>
@@ -468,11 +468,13 @@
           year: "2024",
           projectType: "Digital Media Management",
           status: "Completed",
-          image: "assets/richers-logo.png",
+          image:
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325687/Professional_3D_Minimalist_Office_Logo_Mockup_on_Room_Wall_mbro35.png",
+
           gallery: [
-            "assets/richers3.jpg",
-            "assets/richers2.jpg",
-            "assets/richers1.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325780/229_richers_oonqqp.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325825/396_richers_mnytad.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325873/394_richers_fi7nhr.jpg",
           ],
 
           overviewText: `
@@ -522,8 +524,13 @@
           year: "2024",
           projectType: "Digital Operations",
           status: "Completed",
-          image: "assets/riselogo.png",
-          gallery: ["assets/rise2.jpg", "assets/rise1.jpg", "assets/rise3.jpg"],
+          image:
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325301/RISE_REAL_marketing_o1ngtu.png",
+          gallery: [
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325363/00166_lahore_sky_vtpbuq.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325429/00184_mega_merger_deal_blue_tbqqbm.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325502/00191bahria_sky_2_rncqni.jpg",
+          ],
           overviewText: `
             <div class="project-detail-section">
               <h4>Project Overview</h4>
@@ -571,11 +578,12 @@
           year: "2024",
           projectType: "Digital Design & Marketing",
           status: "Completed",
-          image: "assets/eleva.jpeg",
+          image:
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325166/eleva_ymiz6m.jpg",
           gallery: [
-            "assets/eleva3.jpg",
-            "assets/eleva1.jpg",
-            "assets/eleva2.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782325092/eleva6_hiajjy.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782324820/eleva1_cndqd4.jpg",
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782324696/eleva5_gajri5.jpg",
           ],
           overviewText: `
             <div class="project-detail-section">
@@ -608,12 +616,64 @@
             </div>
           `,
         },
+        {
+          id: 4,
+          title: "TeoriProve.net",
+          category: "Video Editing & Social Media Management",
+          shortDesc:
+            "Video editing and social media management work created for TeoriProve.net, a digital learning platform focused on helping users prepare for theory tests through structured practice and educational content.",
+          tags: [
+            "Video Editing",
+            "Social Media Management",
+            "Content Creation",
+            "TikTok Growth",
+            "Digital Marketing",
+          ],
+          year: "2024",
+          projectType: "Video Editing & Social Media Management",
+          status: "Completed",
+          image:
+            "https://res.cloudinary.com/dhllqbozk/image/upload/v1782334755/teori_rpjwgy.jpg",
+          gallery: [
+            "https://res.cloudinary.com/dhllqbozk/video/upload/v1782323856/ssstik.io_1781309409237_zvoipx.mp4",
+            "https://res.cloudinary.com/dhllqbozk/video/upload/v1782323606/0405-copy-copy-copy_u31tm0.mp4",
+            "https://res.cloudinary.com/dhllqbozk/video/upload/v1782324548/lv_0_20260106020629_ue6z0h.mp4",
+          ],
+          overviewText: `
+            <div class="project-detail-section">
+              <h4>Project Overview</h4>
+              <p>Video editing and social media management work was carried out for TeoriProve.net, a digital learning platform focused on helping users prepare for theory tests through structured practice and educational content.</p>
+              
+              <h4>Challenge</h4>
+              <p>Creating engaging educational content that could capture audience attention while maintaining consistency, clarity, and brand identity across social media platforms.</p>
+              
+              <h4>Solution</h4>
+              <p>Developed short-form video content, optimized social media visuals, and managed content strategy to improve audience engagement and strengthen the platform's online presence.</p>
+              
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Edited engaging educational video content</li>
+                <li>Created short-form social media videos</li>
+                <li>Managed TikTok account content</li>
+                <li>Developed audience-focused editing strategies</li>
+                <li>Maintained consistent posting and content quality</li>
+                <li>Improved brand visibility through social media growth</li>
+                <li>Helped grow TikTok account from 0 to 2,000 followers in under one month</li>
+                <li>Increased engagement through optimized content creation</li>
+              </ul>
+              
+              <h4>Project Outcome</h4>
+              <p>Successfully improved TeoriProve.net's digital presence through consistent content creation, strategic video editing, and audience-focused social media management.</p>
+            </div>
+          `,
+        },
       ];
 
       const filters = [
-        { name: "All Projects", count: 14 },
-        { name: "Development Services", count: 7 },
-        { name: "Specialized Digital Services", count: 7 },
+        { name: "Projects" },
+        { name: "Development Services" },
+        { name: "Specialized Digital Services" },
+        { name: "Video Editing & Social Media Management" },
       ];
 
       const filterContainer = document.getElementById("filter-container");
@@ -621,14 +681,14 @@
       const mainView = document.getElementById("portfolio-main-view");
       const detailView = document.getElementById("portfolio-detail-view");
 
-      let currentFilter = "All Projects";
+      let currentFilter = "Projects";
 
       function renderFilters() {
         filterContainer.innerHTML = filters
           .map(
             (filter) => `
           <button class="filter-btn ${currentFilter === filter.name ? "active" : ""}" onclick="setFilter('${filter.name}')">
-            ${filter.name} <span class="filter-count">${filter.count}</span>
+            ${filter.name} <span class="filter-count"></span>
           </button>
         `,
           )
@@ -643,7 +703,7 @@
 
       function renderProjects() {
         const filtered =
-          currentFilter === "All Projects"
+          currentFilter === "Projects"
             ? portfolioData
             : portfolioData.filter((p) => p.category === currentFilter);
 
@@ -652,7 +712,7 @@
             (project) => `
           <div class="project-card" onclick="openProject(${project.id})">
             <div style="height: 220px; background-color: var(--img-placeholder); position: relative;">
-              <img src="${project.image || ""}" style="width: 100%; height: 100%; object-fit: cover;" alt="${project.title}" />
+              <img src="${project.image || ""}" style="width: 100%; height: 100%; object-fit: cover; ${!project.image ? "display:none;" : ""}" alt="${project.title}" />
             </div>
             <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
               <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">${project.title}</h3>
@@ -683,13 +743,15 @@
         // Ensure gallery array exists for safety
         const gal = project.gallery || ["", "", ""];
 
+        // Custom flag for conditional rendering of Video Gallery ONLY on Project 4
+        const isVideoGal = project.id === 4;
+
         detailView.innerHTML = `
           <button onclick="closeProject()" style="display: flex; align-items: center; background: transparent; border: 1px solid var(--btn-border); color: var(--text); padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 40px; font-size: 0.9rem; transition: background 0.3s;" onmouseover="this.style.background='var(--filter-bg)'" onmouseout="this.style.background='transparent'">
             < Back to Work
           </button>
           
           <div style="display: flex; flex-wrap: wrap; gap: 60px; margin-bottom: 60px;">
-            <!-- Left Side: Content -->
             <div style="flex: 1 1 500px;">
               <h1 style="color: var(--text); font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">${project.title}</h1>
               <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 32px; font-size: 1.1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 24px;">
@@ -700,31 +762,36 @@
               </div>
             </div>
             
-            <!-- Right Side: 3-Image Gallery Layout -->
             <div style="flex: 1 1 500px; display: flex; flex-direction: column; gap: 24px;">
-              
-              <!-- Image 1: Main Project Screenshot -->
-              <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; aspect-ratio: 4/3;">
+              <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; position: relative; min-height: 400px; display: flex; justify-content: center; align-items: center;">
+  ${
+    isVideoGal
+      ? `<video src="${gal[0]}" style="width: 100%; height: 100%; object-fit: contain; ${!gal[0] ? "display:none;" : ""}" controls></video>
+         ${!gal[0] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); text-align: center; padding: 15px; font-size: 0.9rem; font-weight: 500;">Main Project Video</div>' : ""}`
+      : `<img src="${gal[0]}" alt="${project.title} - Main View" style="width: 100%; height: 100%; object-fit: cover; ${!gal[0] ? "display:none;" : ""}" />
+         ${!gal[0] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); text-align: center; padding: 15px; font-size: 0.9rem; font-weight: 500;">Main Project Image</div>' : ""}`
+  }
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start;">
   
-  <img src="${gal[0]}" alt="${project.title} - Main Image" style="width: 100%; height: 100%; object-fit: cover; ${!gal[0] ? 'display:none;' : ''}" />
-  
-  ${!gal[0] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); font-weight: 500;">Main Project Screenshot</div>' : ""}
+  <div style="width: 100%; border-radius: 16px; border: 1px solid var(--card-border); overflow: hidden;">
+    ${
+      isVideoGal
+        ? `<video src="${gal[1]}" style="width: 100%; height: auto; min-height: 220px; object-fit: cover; object-position: center; display: block; ${!gal[1] ? "display:none;" : ""}" controls></video>`
+        : `<img src="${gal[1]}" alt="Extra View 1" style="width: 100%; height: auto; min-height: 220px; object-fit: cover; object-position: center; display: block; ${!gal[1] ? "display:none;" : ""}" />`
+    }
+  </div>
+                
+  <div style="width: 100%; border-radius: 16px; border: 1px solid var(--card-border); overflow: hidden;">
+    ${
+      isVideoGal
+        ? `<video src="${gal[2]}" style="width: 100%; height: auto; min-height: 220px; object-fit: cover; object-position: center; display: block; ${!gal[2] ? "display:none;" : ""}" controls></video>`
+        : `<img src="${gal[2]}" alt="Extra View 2" style="width: 100%; height: auto; min-height: 220px; object-fit: cover; object-position: center; display: block; ${!gal[2] ? "display:none;" : ""}" />`
+    }
+  </div>
 
 </div>
-              <!-- Sub Images Grid -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-                
-                <!-- Image 2: Design/Section -->
-                <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; position: relative; aspect-ratio: 1/1;">
-                  <img src="${gal[1]}" alt="${project.title} - Detail View" style="width: 100%; height: 100%; object-fit: cover; ${!gal[1] ? "display:none;" : ""}" />
-                  ${!gal[1] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); text-align: center; padding: 15px; font-size: 0.9rem; font-weight: 500;">Additional Design/Section</div>' : ""}
-                </div>
-                
-                <!-- Image 3: Mobile/Extra -->
-                <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; position: relative; aspect-ratio: 1/1;">
-                  <img src="${gal[2]}" alt="${project.title} - Mobile View" style="width: 100%; height: 100%; object-fit: cover; ${!gal[2] ? "display:none;" : ""}" />
-                  ${!gal[2] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); text-align: center; padding: 15px; font-size: 0.9rem; font-weight: 500;">Mobile Responsive / Extra View</div>' : ""}
-                </div>
                 
               </div>
             </div>
