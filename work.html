@@ -652,8 +652,7 @@
             (project) => `
           <div class="project-card" onclick="openProject(${project.id})">
             <div style="height: 220px; background-color: var(--img-placeholder); position: relative;">
-              <img src="${gal[0]}" alt="${project.title} - Main Image" style="width: 100%; height: 100%; object-fit: contain; ${!gal[0] ? "display:none;" : ""}" />
-              
+              <img src="${project.image || ""}" style="width: 100%; height: 100%; object-fit: cover;" alt="${project.title}" />
             </div>
             <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
               <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">${project.title}</h3>
