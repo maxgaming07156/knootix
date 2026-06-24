@@ -413,31 +413,42 @@
       const portfolioData = [
         {
           id: 1,
-          title: "CreamCraft Skyblock Network",
-          category: "Development Services",
-          shortDesc: "A custom-built Minecraft Skyblock network.",
-          tags: ["Java", "Minecraft", "Custom Plugins", "+1 more"],
-          year: "2022",
-          projectType: "Custom Game Server",
+          title: "The Richers Group",
+          category: "Specialized Digital Services",
+          shortDesc:
+            "Complete digital media management including social media operations, creative designs, video editing, advertisement content creation, and online brand presence management.",
+          tags: [
+            "Social Media Management",
+            "Graphic Design",
+            "Video Editing",
+            "Digital Marketing",
+          ],
+          year: "2024",
+          projectType: "Digital Media Management",
           status: "Completed",
           image: "assets/creamcraft.jpg",
           overviewText:
-            "<p>CreamCraft was a forward-looking Minecraft Skyblock network. Here we provide customized features, specialized plugins, and an immersive user experience tailored to dedicated gamers.</p>",
+            "<p>Complete digital media management including social media operations, creative designs, video editing, advertisement content creation, and online brand presence management.</p>",
           delivered: [],
         },
         {
           id: 2,
-          title: "Zaydex E-Commerce Store",
+          title: "Rise and Real Marketing",
           category: "Specialized Digital Services",
           shortDesc:
-            "A successful 12-month clothing and accessory online store.",
-          tags: ["Shopify", "E-Commerce", "Marketing", "+1 more"],
-          year: "2023",
-          projectType: "E-Commerce Web App",
+            "Full digital operations including social media post design, promotional content, advertisement creatives, campaign visuals, and online presence management.",
+          tags: [
+            "Digital Marketing",
+            "Content Creation",
+            "Advertisement Campaigns",
+            "Branding",
+          ],
+          year: "2024",
+          projectType: "Digital Operations",
           status: "Completed",
           image: "assets/zaydex.jpg",
           overviewText:
-            "<p>Comprehensive setup and management of a modern e-commerce brand. We handled everything from initial UI/UX design to continuous marketing strategies and Shopify integration.</p>",
+            "<p>Full digital operations including social media post design, promotional content, advertisement creatives, campaign visuals, and online presence management.</p>",
           delivered: [],
         },
         {
@@ -533,7 +544,6 @@
           </button>
           
           <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 60px;">
-            <!-- Left Side: Detailed Text -->
             <div style="flex: 1 1 500px;">
               <h1 style="color: var(--text); font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">${project.title}</h1>
               <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 24px; font-size: 1.1rem;">
@@ -544,9 +554,7 @@
               </div>
             </div>
             
-            <!-- Right Side: Image -->
             <div style="flex: 1 1 400px;">
-              <!-- Yahan apki picture show hogi -->
               <img 
                 src="${project.image || ""}" 
                 alt="${project.title}" 
