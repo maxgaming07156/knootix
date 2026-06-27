@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="style.css" />
 
     <style>
-      /* --- Blog-Specific Styles Updated to Code 1 Theme --- */
-
-      /* --- Blog Hero & Search --- */
       .blog-header {
         text-align: center;
         padding: 120px 20px 60px;
@@ -1039,7 +1036,6 @@
       const searchInput = document.getElementById("searchInput");
       const searchDropdown = document.getElementById("searchDropdown");
 
-      // 2. Define the Searchable Data based on your current blocks/projects
       const searchData = [
         {
           id: "project1",
@@ -1063,25 +1059,21 @@
         },
       ];
 
-      // 3. Listen for typing events in the search bar
       searchInput.addEventListener("input", function () {
         const query = this.value.toLowerCase().trim();
         searchDropdown.innerHTML = ""; // Clear previous results
 
-        // If input is empty, hide the dropdown immediately
         if (query.length === 0) {
           searchDropdown.style.display = "none";
           return;
         }
 
-        // 4. Filter the data against the typed keyword
         const results = searchData.filter(
           (item) =>
             item.title.toLowerCase().includes(query) ||
             item.desc.toLowerCase().includes(query),
         );
 
-        // 5. Populate and Show the elegant dropdown card
         if (results.length > 0) {
           results.forEach((item) => {
             const div = document.createElement("div");
@@ -1091,12 +1083,10 @@
               <p class="search-result-desc">${item.desc}</p>
             `;
 
-            // Allow clicking the result to open the project and close dropdown
             div.onclick = () => {
               searchInput.value = item.title;
               searchDropdown.style.display = "none";
 
-              // Ensure this function exists in your main JS logic to handle transitions
               if (typeof openProject === "function") {
                 openProject(item.id);
               }
@@ -1105,7 +1095,6 @@
             searchDropdown.appendChild(div);
           });
         } else {
-          // If no matches, show a clean "No results found" state
           searchDropdown.innerHTML = `
             <div class="search-result-item" style="cursor: default; background: transparent;">
               <p class="search-result-desc">No matching services found.</p>
@@ -1113,10 +1102,9 @@
           `;
         }
 
-        searchDropdown.style.display = "block"; // Make dropdown visible
+        searchDropdown.style.display = "block";
       });
 
-      // 6. Optional UI enhancement: Close dropdown when clicking anywhere outside of it
       document.addEventListener("click", function (e) {
         if (
           !searchInput.contains(e.target) &&

@@ -91,7 +91,6 @@ async function handleFormSubmit() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        // YAHAN APNI KEY DALEIN ↓
         access_key: "db4ec93b-2da2-4505-911e-2a30f8195bf8",
         subject: "New Contact Form Submission - Knootix Website",
         Name: name,
@@ -111,7 +110,6 @@ async function handleFormSubmit() {
       status.textContent =
         "✓ Message sent successfully! We'll be in touch soon.";
 
-      // Clear input fields
       document.getElementById("cfName").value = "";
       document.getElementById("cfEmail").value = "";
       document.getElementById("cfService").value = "";
@@ -135,7 +133,6 @@ async function handleFormSubmit() {
   }
 }
 
-// AI Chatbot Logic
 function sendChat() {
   const input = document.getElementById("chatInput");
   const text = input.value.trim();
@@ -144,13 +141,11 @@ function sendChat() {
 
   const messages = document.getElementById("chatMessages");
 
-  // User message
   const userMsg = document.createElement("div");
   userMsg.className = "msg user";
   userMsg.textContent = text;
   messages.appendChild(userMsg);
 
-  // Typing indicator
   const typingMsg = document.createElement("div");
   typingMsg.className = "msg bot typing";
   typingMsg.innerHTML =
@@ -158,7 +153,6 @@ function sendChat() {
   messages.appendChild(typingMsg);
   messages.scrollTop = messages.scrollHeight;
 
-  // Simulate network delay and process logic contextually
   setTimeout(() => {
     typingMsg.remove();
     let reply =
@@ -166,7 +160,6 @@ function sendChat() {
 
     const lowerText = text.toLowerCase();
 
-    // Simple Rule-Based Context Routing
     if (
       lowerText.includes("service") ||
       lowerText.includes("offer") ||
