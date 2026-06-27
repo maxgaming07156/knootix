@@ -4,9 +4,7 @@ function toggleTheme() {
   const isDark = html.getAttribute("data-theme") === "dark";
   html.setAttribute("data-theme", isDark ? "light" : "dark");
   document.getElementById("themeIcon").textContent = isDark ? "🌙" : "☀️";
-  document.getElementById("themeLabel").textContent = isDark
-    ? "Dark"
-    : "Light";
+  document.getElementById("themeLabel").textContent = isDark ? "Dark" : "Light";
 }
 
 // Mobile menu
@@ -29,9 +27,7 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.1 },
 );
-document
-  .querySelectorAll(".reveal")
-  .forEach((el) => observer.observe(el));
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
 // Counter animation (Only executed if on index.html with #hero)
 function animateCount(el, target, suffix = "") {
@@ -63,13 +59,16 @@ if (heroSection) {
   heroObs.observe(heroSection);
 }
 
-// Form submit
+// Form submit to WhatsApp
 function handleFormSubmit() {
   const name = document.getElementById("cfName").value.trim();
   const email = document.getElementById("cfEmail").value.trim();
+  const service = document.getElementById("cfService").value;
   const msg = document.getElementById("cfMessage").value.trim();
   const status = document.getElementById("formStatus");
-  if (!name || !email || !msg) {
+
+  // Check karna ke koi field khali toh nahi
+  if (!name || !email || !msg || !service) {
     status.style.display = "block";
     status.style.background = "rgba(255,80,80,0.1)";
     status.style.border = "1px solid rgba(255,80,80,0.3)";
@@ -77,15 +76,32 @@ function handleFormSubmit() {
     status.textContent = "⚠️ Please fill in all required fields.";
     return;
   }
+
+  // 1. Apka WhatsApp Number
+  const phoneNumber = "923414680668";
+
+  // 2. WhatsApp ke liye message banana
+  const whatsappMessage = `*New Inquiry - Knootix*\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n\n*Message:*\n${msg}`;
+
+  // 3. Text ko URL friendly banana
+  const encodedMessage = encodeURIComponent(whatsappMessage);
+
+  // 4. Naye tab mein WhatsApp open karna
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  window.open(whatsappUrl, "_blank");
+
+  // 5. Success message dikhana aur form clear karna
   status.style.display = "block";
   status.style.background = "var(--accent-glow)";
   status.style.border = "1px solid rgba(77,184,138,0.3)";
   status.style.color = "var(--accent)";
-  status.textContent =
-    "✓ Message sent! We'll get back to you within 24 hours.";
+  status.textContent = "✓ Opening WhatsApp...";
+
   document.getElementById("cfName").value = "";
   document.getElementById("cfEmail").value = "";
+  document.getElementById("cfService").value = "";
   document.getElementById("cfMessage").value = "";
+
   setTimeout(() => {
     status.style.display = "none";
   }, 5000);
@@ -130,10 +146,7 @@ function sendChat() {
     ) {
       reply =
         "We offer Video Editing, Graphic Design, Website Development, and Photography. Let us know which one you need help with!";
-    } else if (
-      lowerText.includes("video") ||
-      lowerText.includes("edit")
-    ) {
+    } else if (lowerText.includes("video") || lowerText.includes("edit")) {
       reply =
         "Our video editing covers brand films, cinematic reels, color grading, and VFX overlays for all social platforms.";
     } else if (
@@ -151,10 +164,7 @@ function sendChat() {
     ) {
       reply =
         "We build custom, responsive websites, landing pages, and robust E-commerce platforms optimized for SEO.";
-    } else if (
-      lowerText.includes("photo") ||
-      lowerText.includes("shoot")
-    ) {
+    } else if (lowerText.includes("photo") || lowerText.includes("shoot")) {
       reply =
         "Our photography services range from product and commercial shoots to corporate headshots and event coverage.";
     } else if (

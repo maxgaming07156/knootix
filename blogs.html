@@ -34,9 +34,7 @@
         color: var(--text);
       }
       .blog-header h1 .accent-text {
-        color: var(
-          --text
-        ); /* Defaulting to text, accent handled by style.css if present */
+        color: var(--text);
       }
       .blog-header p {
         font-family: "Inter", sans-serif;
@@ -601,7 +599,7 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="work.html">Work</a></li>
+        <li><a href="portfolio.html">Work</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="about.html">About</a></li>
         <li>
@@ -661,7 +659,7 @@
         >Services</a
       >
       <a
-        href="work.html"
+        href="portfolio.html"
         onclick="closeMobileMenu()"
         style="
           font-family: &quot;Inter&quot;, sans-serif;
@@ -988,7 +986,7 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="work.html">Our Work</a></li>
+            <li><a href="portfolio.html">Our Work</a></li>
             <li><a href="reviews.html">Testimonials</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -1032,304 +1030,98 @@
               <use href="#icon-mail"></use>
             </svg>
           </a>
-          <a
-            href="https://wa.me/923414680668?text=Hello%20Knootix!"
-            target="_blank"
-            class="social-link"
-          >
-            <svg class="svg-icon" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-              />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-              />
-            </svg>
-          </a>
         </div>
       </div>
     </footer>
 
-    <a
-      href="https://wa.me/923414680668?text=Hello%20Knootix!"
-      target="_blank"
-      class="whatsapp-float"
-      title="Chat on WhatsApp"
-    >
-      <div class="wa-pulse"></div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="#fff"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-        />
-        <path
-          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-        />
-      </svg>
-    </a>
-
-    <script src="script.js"></script>
-
     <script>
-      // --- Project Data Structure ---
-      const projectsData = {
-        project1: {
-          title:
-            "Why Professional UI/UX Design Is a Game-Changer for Small Businesses in 2026",
-          content: `
-            <h3>The Current Digital Landscape</h3>
-            <p>In the modern digital age, a website is often the first and most critical interaction a customer has with your brand. With attention spans shrinking, businesses that neglect their visual presence often struggle to capture leads. We explore how investing in professional UI/UX design can completely transform conversion metrics and user loyalty.</p>
-            
-            <h3>Understanding the Difference: UI vs UX</h3>
-            <div class="detail-info-grid">
-              <div class="detail-info-box">
-                <h4>User Interface (UI)</h4>
-                <p>The visual touchpoints of your digital product. This includes carefully curated typography, interactive buttons, color psychology, and grid alignment that create aesthetic appeal.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>User Experience (UX)</h4>
-                <p>The underlying architecture and emotional journey of the user. It dictates navigation flow, usability, accessibility, and how seamlessly a user can accomplish their goals.</p>
-              </div>
-            </div>
-
-            <h3>Measurable Client Results</h3>
-            <ul>
-              <li><strong>40% increase</strong> in average user retention and session duration.</li>
-              <li><strong>25% boost</strong> in overall checkout conversions and lead capture rates.</li>
-              <li>Drastic reduction in bounce rates across mobile devices.</li>
-            </ul>
-
-            <h3>Our UI/UX Design Process</h3>
-            <p>At Knootix, our methodology guarantees a product tailored to your audience. We initiate with extensive <strong>user research</strong> and competitive analysis. Following that, we construct wireframes to establish layout hierarchies. Finally, we build high-fidelity interactive prototypes and perform rigorous usability testing to refine the end product.</p>
-
-            <h3>Common Mistakes & Quick Wins</h3>
-            <p>A prevalent mistake small businesses make is overcrowding their landing pages with unprioritized information, leading to cognitive overload. A quick win is streamlining your top navigation, utilizing ample whitespace, and ensuring high color contrast for maximum readability.</p>
-
-            <h3>FAQs</h3>
-            <p><strong>How long does a comprehensive UI/UX revamp take?</strong><br> Typically, a complete overhaul takes 2-4 weeks, depending heavily on the scope and complexity of the platform.</p>
-          `,
-        },
-        project2: {
-          title: "Professional Video Editing Tips for Influencers and Brands",
-          content: `
-            <h3>The Power of Visual Storytelling</h3>
-            <p>Video content has dominated social platforms, offering the highest return on investment for digital marketers. However, cutting through the noise requires more than just high-resolution footage; it requires masterful editing. The foundation of any great video relies on narrative structure and emotional resonance.</p>
-            
-            <h3>Core Elements of High-End Editing</h3>
-            <div class="detail-info-grid">
-              <div class="detail-info-box">
-                <h4>Storytelling & Pacing</h4>
-                <p>Pacing dictates the energy of your video. Fast, rhythmic cuts are perfect for excitement and product teasers, while slow, methodical transitions allow for emotional impact and narrative depth.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Color Grading</h4>
-                <p>More than just correction, grading sets the mood and aligns the visuals with your distinct brand identity, ensuring consistency across all media touchpoints.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Sound Design</h4>
-                <p>Audio is 50% of the viewing experience. Proper sound design—incorporating crisp SFX, balanced dialogue, and strategic background scoring—elevates production value immensely.</p>
-              </div>
-            </div>
-
-            <h3>Platform-Specific Strategies</h3>
-            <ul>
-              <li><strong>TikTok & Instagram Reels:</strong> You must hook the viewer within the first 3 seconds. Utilize vertical native formats (9:16), dynamic captions, and trending audio appropriately.</li>
-              <li><strong>YouTube:</strong> Focus heavily on narrative arcs, viewer retention analytics, and pairing your video with high-converting, custom-designed thumbnails.</li>
-            </ul>
-
-            <h3>Knootix Video Editing Services</h3>
-            <p>Our agency provides end-to-end video post-production. From sorting and cutting raw footage to integrating advanced motion graphics, dynamic typography, and professional audio mastering, we deliver ready-to-publish assets tailored for growth.</p>
-
-            <h3>FAQs</h3>
-            <p><strong>What industry-standard software do you leverage?</strong><br> We rely on the Adobe Creative Cloud suite, primarily Premiere Pro for cutting and After Effects for complex motion graphics.</p>
-          `,
-        },
-        project3: {
-          title:
-            "How Professional Website Development Helps Your Business Grow",
-          content: `
-            <h3>The Role of Your Digital Storefront</h3>
-            <p>Your website operates as your most reliable employee, working 24/7 to market your business. In an increasingly competitive digital marketplace, relying on generic templates often leads to missed opportunities. Professional website development is critical for standing out, outperforming competitors, and securing high-quality leads.</p>
-            
-            <h3>Why DIY Websites Often Fail</h3>
-            <p>Sluggish load times, poor mobile optimization, broken links, and confusing navigation architectures are the top reasons DIY websites bleed potential customers. If your site takes longer than three seconds to load, you've likely already lost the sale.</p>
-
-            <h3>Advantages of Custom Development</h3>
-            <div class="detail-info-grid">
-              <div class="detail-info-box">
-                <h4>Enhanced SEO Architecture</h4>
-                <p>Custom builds ensure clean, semantic code that search engine crawlers prefer, leading to higher organic rankings and visibility.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Enterprise-Level Security</h4>
-                <p>Protecting user data is paramount. Professional development integrates modern security protocols to safeguard against vulnerabilities.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Unmatched Speed & Performance</h4>
-                <p>Optimized assets, advanced caching, and lean codebases guarantee lightning-fast load times, directly impacting conversion rates.</p>
-              </div>
-            </div>
-
-            <h3>Client Results & The Knootix Process</h3>
-            <p>Following a custom build, our clients typically see a <strong>3x faster page load speed</strong> and significant boosts in organic traffic. Our comprehensive process includes an initial Discovery Phase, bespoke UI/UX Design, rigorous Frontend and Backend Development, multi-device Testing, and finally, seamless Deployment.</p>
-
-            <h3>Knootix Web Services</h3>
-            <p>We specialize in building modern, fully responsive business websites, scalable e-commerce platforms, and robust custom web applications engineered for long-term growth.</p>
-          `,
-        },
-        project4: {
-          title: "Graphic Designing",
-          content: `
-            <h3>Introduction</h3>
-            <p>Knootix creates professional visual identities that help businesses build a strong, recognizable brand presence. In a saturated digital landscape, your visual language is often the defining factor that separates you from the competition. We craft bespoke designs that not only look stunning but communicate your core values and strategic positioning effectively.</p>
-
-            <h3>Our Graphic Design Services</h3>
-            <div class="detail-info-grid">
-              <div class="detail-info-box">
-                <h4>Brand Identity Design</h4>
-                <p>Comprehensive logo creation, custom color palettes, typography guidelines, and extensive brand books tailored to resonate with your target demographic.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Social Media Design</h4>
-                <p>Highly engaging templates, daily post graphics, and platform-specific cover imagery engineered for maximum user engagement and algorithmic success.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Marketing Graphics</h4>
-                <p>High-conversion ad creatives, dynamic email newsletter graphics, digital banners, and printable brochures optimized for your marketing campaigns.</p>
-              </div>
-              <div class="detail-info-box">
-                <h4>Creative Visual Solutions</h4>
-                <p>Bespoke illustrations, custom iconography, and unique graphic assets that give your brand a distinct, authoritative, and memorable voice.</p>
-              </div>
-            </div>
-
-            <h3>Our Design Process</h3>
-            <ul>
-              <li><strong>1. Research:</strong> We analyze your industry landscape, key competitors, and target audience to find the perfect visual positioning.</li>
-              <li><strong>2. Concept Creation:</strong> Developing initial sketches, mood boards, and diverse conceptual directions for your review and feedback.</li>
-              <li><strong>3. Design Development:</strong> Refining the chosen concepts into polished, high-fidelity digital assets ready for deployment.</li>
-              <li><strong>4. Final Delivery:</strong> Providing all necessary file formats (vectors, rasters), comprehensive source files, and brand usage guidelines.</li>
-            </ul>
-
-            <h3>Benefits of Professional Graphic Design</h3>
-            <p>Investing in professional design instantly enhances brand credibility, improves customer trust, and ensures visual consistency across every single touchpoint. It directly impacts your bottom line by making your marketing materials more compelling, professional, and easier for consumers to digest.</p>
-            
-            <h3>Why Choose Knootix</h3>
-            <p>Our creative team seamlessly blends strategic business thinking with aesthetic excellence. We don't just make things look pretty; we design with your explicit business goals in mind, ensuring that every pixel, color, and layout serves a distinct purpose.</p>
-
-            <h3>FAQ</h3>
-            <p><strong>What is the typical turnaround time?</strong><br> Depending on the scope of the project, full brand identities typically take 2-4 weeks, while standalone social media graphics can often be delivered in just a few days.</p>
-            <p><strong>Do I get the original source files?</strong><br> Absolutely. We provide complete ownership and high-quality source files for all finalized designs.</p>
-
-            <h3>Get in Touch</h3>
-            <p>Ready to elevate your brand's visual identity? Contact our creative team today to discuss your graphic design needs at <a href="mailto:knootix@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">knootix@gmail.com</a>.</p>
-          `,
-        },
-      };
-
-      // --- Project Navigation Logic ---
-      function openProject(projectId) {
-        const project = projectsData[projectId];
-        if (!project) return;
-
-        document.getElementById("main-view").style.display = "none";
-        document.getElementById("project-detail").style.display = "block";
-
-        document.getElementById("detailTitle").innerText = project.title;
-        document.getElementById("detailContent").innerHTML = project.content;
-
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      function closeProject() {
-        document.getElementById("project-detail").style.display = "none";
-        document.getElementById("main-view").style.display = "block";
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-
-      // --- Functional Search Bar Logic ---
-      const knootixServices = [
-        {
-          name: "Digital Marketing",
-          desc: "Social media marketing, Brand growth strategies, Online presence improvement",
-          keywords: ["marketing", "digital", "social", "growth", "seo"],
-        },
-        {
-          name: "Graphic Designing",
-          desc: "Brand identity, Social media designs, Creative visuals",
-          keywords: ["graphic", "design", "logo", "visual", "branding"],
-        },
-        {
-          name: "Website Development",
-          desc: "Modern responsive websites, Frontend development, Business websites",
-          keywords: ["web", "development", "website", "frontend", "coding"],
-        },
-        {
-          name: "Photography",
-          desc: "Professional photography services, Brand/product photography",
-          keywords: ["photo", "photography", "camera", "product"],
-        },
-        {
-          name: "UI/UX Design",
-          desc: "Website interface design, User experience improvement, Conversion-focused designs",
-          keywords: ["ui", "ux", "interface", "experience", "design"],
-        },
-      ];
-
+      // 1. Target the Input and Dropdown containers
       const searchInput = document.getElementById("searchInput");
       const searchDropdown = document.getElementById("searchDropdown");
 
-      searchInput.addEventListener("input", (e) => {
-        const query = e.target.value.toLowerCase().trim();
+      // 2. Define the Searchable Data based on your current blocks/projects
+      const searchData = [
+        {
+          id: "project1",
+          title: "UI/UX Design",
+          desc: "Learn how professional UI/UX design improves conversion rates and user retention for small businesses in 2026.",
+        },
+        {
+          id: "project2",
+          title: "Professional Video Editing",
+          desc: "Essential storytelling, pacing, and color grading tips to make your brand's video content stand out.",
+        },
+        {
+          id: "project3",
+          title: "Website Development",
+          desc: "Discover why professional web development is essential for outperforming competitors and securing leads.",
+        },
+        {
+          id: "project4",
+          title: "Graphic Designing",
+          desc: "Knootix creates professional visual identities that help businesses build a strong brand presence.",
+        },
+      ];
 
-        if (query.length < 2) {
+      // 3. Listen for typing events in the search bar
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase().trim();
+        searchDropdown.innerHTML = ""; // Clear previous results
+
+        // If input is empty, hide the dropdown immediately
+        if (query.length === 0) {
           searchDropdown.style.display = "none";
           return;
         }
 
-        let results = [];
+        // 4. Filter the data against the typed keyword
+        const results = searchData.filter(
+          (item) =>
+            item.title.toLowerCase().includes(query) ||
+            item.desc.toLowerCase().includes(query),
+        );
 
-        if ("knootix".includes(query)) {
-          results = knootixServices;
-        } else {
-          results = knootixServices.filter(
-            (service) =>
-              service.name.toLowerCase().includes(query) ||
-              service.desc.toLowerCase().includes(query) ||
-              service.keywords.some((k) => k.includes(query)),
-          );
-        }
-
+        // 5. Populate and Show the elegant dropdown card
         if (results.length > 0) {
-          searchDropdown.innerHTML = results
-            .map(
-              (service) => `
-            <div class="search-result-item" onclick="alert('Redirecting to ${service.name} service page...')">
-              <h4 class="search-result-title">${service.name}</h4>
-              <p class="search-result-desc">${service.desc}</p>
-            </div>
-          `,
-            )
-            .join("");
-          searchDropdown.style.display = "block";
+          results.forEach((item) => {
+            const div = document.createElement("div");
+            div.className = "search-result-item";
+            div.innerHTML = `
+              <h4 class="search-result-title">${item.title}</h4>
+              <p class="search-result-desc">${item.desc}</p>
+            `;
+
+            // Allow clicking the result to open the project and close dropdown
+            div.onclick = () => {
+              searchInput.value = item.title;
+              searchDropdown.style.display = "none";
+
+              // Ensure this function exists in your main JS logic to handle transitions
+              if (typeof openProject === "function") {
+                openProject(item.id);
+              }
+            };
+
+            searchDropdown.appendChild(div);
+          });
         } else {
+          // If no matches, show a clean "No results found" state
           searchDropdown.innerHTML = `
-            <div class="search-result-item">
-              <p class="search-result-desc">No direct services found for "${query}". Try searching "Web", "Design", or "Marketing".</p>
+            <div class="search-result-item" style="cursor: default; background: transparent;">
+              <p class="search-result-desc">No matching services found.</p>
             </div>
           `;
-          searchDropdown.style.display = "block";
         }
+
+        searchDropdown.style.display = "block"; // Make dropdown visible
       });
 
-      // Hide dropdown when clicking outside
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".search-container")) {
+      // 6. Optional UI enhancement: Close dropdown when clicking anywhere outside of it
+      document.addEventListener("click", function (e) {
+        if (
+          !searchInput.contains(e.target) &&
+          !searchDropdown.contains(e.target)
+        ) {
           searchDropdown.style.display = "none";
         }
       });
