@@ -29,7 +29,7 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-// Counter animation (Only executed if on index.html with #hero)
+// Counter animation
 function animateCount(el, target, suffix = "") {
   let current = 0;
   const step = target / 60;
@@ -59,15 +59,15 @@ if (heroSection) {
   heroObs.observe(heroSection);
 }
 
-// Form submit to WhatsApp
-function handleFormSubmit() {
+// Form submit to Email using Web3Forms
+async function handleFormSubmit() {
   const name = document.getElementById("cfName").value.trim();
   const email = document.getElementById("cfEmail").value.trim();
   const service = document.getElementById("cfService").value;
   const msg = document.getElementById("cfMessage").value.trim();
   const status = document.getElementById("formStatus");
+  const submitBtn = document.querySelector(".submit-btn");
 
-  // Check karna ke koi field khali toh nahi
   if (!name || !email || !msg || !service) {
     status.style.display = "block";
     status.style.background = "rgba(255,80,80,0.1)";
@@ -77,34 +77,62 @@ function handleFormSubmit() {
     return;
   }
 
-  // 1. Apka WhatsApp Number
-  const phoneNumber = "923414680668";
+  // Button text change to show progress
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.textContent = "Sending...";
+  submitBtn.style.opacity = "0.7";
+  submitBtn.disabled = true;
 
-  // 2. WhatsApp ke liye message banana
-  const whatsappMessage = `*New Inquiry - Knootix*\n\n*Name:* ${name}\n*Email:* ${email}\n*Service:* ${service}\n\n*Message:*\n${msg}`;
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        // YAHAN APNI KEY DALEIN ↓
+        access_key: "db4ec93b-2da2-4505-911e-2a30f8195bf8",
+        subject: "New Contact Form Submission - Knootix Website",
+        Name: name,
+        Email: email,
+        Service: service,
+        Message: msg,
+      }),
+    });
 
-  // 3. Text ko URL friendly banana
-  const encodedMessage = encodeURIComponent(whatsappMessage);
+    const result = await response.json();
 
-  // 4. Naye tab mein WhatsApp open karna
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-  window.open(whatsappUrl, "_blank");
+    if (result.success) {
+      status.style.display = "block";
+      status.style.background = "var(--accent-glow)";
+      status.style.border = "1px solid rgba(77,184,138,0.3)";
+      status.style.color = "var(--accent)";
+      status.textContent =
+        "✓ Message sent successfully! We'll be in touch soon.";
 
-  // 5. Success message dikhana aur form clear karna
-  status.style.display = "block";
-  status.style.background = "var(--accent-glow)";
-  status.style.border = "1px solid rgba(77,184,138,0.3)";
-  status.style.color = "var(--accent)";
-  status.textContent = "✓ Opening WhatsApp...";
-
-  document.getElementById("cfName").value = "";
-  document.getElementById("cfEmail").value = "";
-  document.getElementById("cfService").value = "";
-  document.getElementById("cfMessage").value = "";
-
-  setTimeout(() => {
-    status.style.display = "none";
-  }, 5000);
+      // Clear input fields
+      document.getElementById("cfName").value = "";
+      document.getElementById("cfEmail").value = "";
+      document.getElementById("cfService").value = "";
+      document.getElementById("cfMessage").value = "";
+    } else {
+      throw new Error("Failed to send");
+    }
+  } catch (error) {
+    status.style.display = "block";
+    status.style.background = "rgba(255,80,80,0.1)";
+    status.style.border = "1px solid rgba(255,80,80,0.3)";
+    status.style.color = "#ff8080";
+    status.textContent = "⚠️ Something went wrong. Please try again.";
+  } finally {
+    submitBtn.textContent = originalBtnText;
+    submitBtn.style.opacity = "1";
+    submitBtn.disabled = false;
+    setTimeout(() => {
+      status.style.display = "none";
+    }, 5000);
+  }
 }
 
 // AI Chatbot Logic
