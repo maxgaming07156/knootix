@@ -57,7 +57,7 @@
         gap: 8px;
       }
       .filter-btn.active {
-        background-color: #34d399; /* Knootix Green */
+        background-color: var(--accent-green);
         color: #000;
       }
       .filter-count {
@@ -224,12 +224,7 @@
           <span class="theme-icon" id="themeIcon">☀️</span>
           <span id="themeLabel">Light</span>
         </button>
-        <a
-          href="contact.html"
-          class="nav-cta"
-          style="background-color: #34d399; color: #000"
-          >Get in Touch</a
-        >
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
         <div class="hamburger" onclick="toggleMobileMenu()">
           <span></span><span></span><span></span>
         </div>
@@ -273,19 +268,13 @@
           style="
             font-size: 4.5rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            line-height: 1.1;
             letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            margin-top: 0;
           "
         >
-          Our
-          <span
-            style="
-              background: linear-gradient(90deg, #34d399, #10b981);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            "
-            >Work</span
-          >
+          Our <span class="accent">Work</span>
         </h1>
         <p
           style="
@@ -293,7 +282,8 @@
             margin: 0 auto;
             font-size: 1.1rem;
             color: var(--text-muted);
-            line-height: 1.7;
+            line-height: 1.6;
+            opacity: 0.75;
           "
         >
           Discover our diverse collection of successful projects across web
@@ -312,7 +302,12 @@
             background-color: var(--accent-green-bg);
           "
         >
-          <span style="font-size: 0.95rem; color: var(--accent-green)"
+          <span
+            style="
+              font-size: 0.95rem;
+              color: var(--accent-green);
+              font-weight: 600;
+            "
             >We are currently working on 10 exciting projects behind the
             scenes</span
           >
@@ -320,10 +315,24 @@
       </div>
 
       <div style="text-align: center; padding: 0 5%; margin-bottom: 60px">
-        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px">
+        <h2
+          style="
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+          "
+        >
           Browse Our Projects
         </h2>
-        <p style="color: var(--text-muted); margin-bottom: 32px">
+        <p
+          style="
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            opacity: 0.75;
+            margin-bottom: 32px;
+          "
+        >
           Filter through our portfolio to find projects that match your
           interests
         </p>
@@ -342,6 +351,47 @@
       </div>
 
       <div id="projects-grid"></div>
+
+      <div
+        style="
+          margin: 100px auto 0;
+          padding: 60px 5%;
+          text-align: center;
+          background-color: var(--card-bg);
+          border: 1px solid var(--card-border);
+          border-radius: 24px;
+          max-width: 900px;
+        "
+      >
+        <h2
+          style="
+            font-size: clamp(2.5rem, 4vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            color: var(--text);
+          "
+        >
+          Ready to bring your ideas to life?
+        </h2>
+        <p
+          style="
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            opacity: 0.75;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          Let's create something impactful together. Get in touch and let's
+          discuss your next project.
+        </p>
+        <a href="contact.html" class="btn-primary"> Get Free Consultation → </a>
+      </div>
     </section>
 
     <section
@@ -715,13 +765,13 @@
               <img src="${project.image || ""}" style="width: 100%; height: 100%; object-fit: cover; ${!project.image ? "display:none;" : ""}" alt="${project.title}" />
             </div>
             <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
-              <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; color: var(--text);">${project.title}</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">${project.shortDesc}</p>
+              <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 16px; margin-top: 0; color: var(--text);">${project.title}</h3>
+              <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; opacity: 0.75; margin: 0 0 24px 0; flex-grow: 1;">${project.shortDesc}</p>
               <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;">
                 ${project.tags
                   .map(
                     (tag, idx) => `
-                  <span style="background-color: var(--filter-count-bg); color: ${idx === 0 ? "#fbbf24" : "var(--accent-green)"}; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; border: 1px solid var(--card-border);">${tag}</span>
+                  <span style="background-color: transparent; color: var(--text); padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.1em; opacity: 0.8; border: 1px solid var(--card-border);">${tag}</span>
                 `,
                   )
                   .join("")}
@@ -747,13 +797,13 @@
         const isVideoGal = project.id === 4;
 
         detailView.innerHTML = `
-          <button onclick="closeProject()" style="display: flex; align-items: center; background: transparent; border: 1px solid var(--btn-border); color: var(--text); padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 40px; font-size: 0.9rem; transition: background 0.3s;" onmouseover="this.style.background='var(--filter-bg)'" onmouseout="this.style.background='transparent'">
+          <button onclick="closeProject()" style="display: flex; align-items: center; background: transparent; border: 1px solid var(--btn-border); color: var(--text); padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 40px; font-size: 0.9rem; font-weight: 600; transition: background 0.3s;" onmouseover="this.style.background='var(--filter-bg)'" onmouseout="this.style.background='transparent'">
             < Back to Work
           </button>
           
           <div style="display: flex; flex-wrap: wrap; gap: 60px; margin-bottom: 60px;">
             <div style="flex: 1 1 500px;">
-              <h1 style="color: var(--text); font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">${project.title}</h1>
+              <h1 style="color: var(--text); font-size: clamp(2.5rem, 4vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 16px; margin-top: 0;">${project.title}</h1>
               <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 32px; font-size: 1.1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 24px;">
                 ${project.projectType} • ${project.year}
               </div>

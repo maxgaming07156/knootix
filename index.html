@@ -311,6 +311,148 @@
       </div>
     </div>
 
+    <style>
+      .why-knootix-section {
+        padding: 120px 5%;
+        max-width: 1400px;
+        margin: 0 auto;
+        color: var(--text);
+      }
+
+      .why-knootix-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: flex-start;
+      }
+
+      .why-left-content {
+        position: sticky;
+        top: 120px;
+      }
+
+      .why-badge {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        padding: 6px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        margin-bottom: 24px;
+        opacity: 0.8;
+      }
+
+      .why-headline {
+        font-size: clamp(2.5rem, 4vw, 3.8rem);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      .why-right-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+      }
+
+      .why-card {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .why-card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .why-card h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+        margin-top: 0;
+      }
+
+      .why-card p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        opacity: 0.75;
+        margin: 0;
+      }
+
+      @media (max-width: 968px) {
+        .why-knootix-grid {
+          grid-template-columns: 1fr;
+          gap: 60px;
+        }
+        .why-left-content {
+          position: static;
+        }
+      }
+    </style>
+
+    <section class="why-knootix-section">
+      <div class="why-knootix-grid">
+        <div class="why-left-content">
+          <div class="why-badge">Why Knootix</div>
+          <h2 class="why-headline">
+            We get hired when "good enough" isn't enough.
+          </h2>
+        </div>
+
+        <div class="why-right-content">
+          <div class="why-card">
+            <h3 class="accent">Elite-level design quality.</h3>
+            <p>
+              We obsess over the details that average agencies skip —
+              pixel-perfect layouts, color science, and dynamic motion timing —
+              because they're exactly what separates the forgettable from the
+              unforgettable.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="accent">Conversion-driven user experience.</h3>
+            <p>
+              Beautiful work that doesn't convert is merely decoration. Every
+              digital journey we map is intuitive, accessible, and strategically
+              engineered around achieving your measurable business outcomes.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="accent">Strategic brand positioning.</h3>
+            <p>
+              We build enduring digital identities that command attention. Our
+              senior creative team crafts cohesive brand experiences that
+              resonate deeply and position you as an undisputed market leader.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="accent">Flawless technical development.</h3>
+            <p>
+              Exceptional design demands robust engineering. We don't hide
+              juniors in the background; you get premium, blazing-fast, and
+              secure web solutions built by experts doing the craft.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="accent">Global perspective, bespoke solutions.</h3>
+            <p>
+              Rooted in creative excellence and serving brands worldwide. We
+              understand the nuances of diverse digital landscapes, delivering
+              tailored creative solutions without compromising your vision.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer-grid">
         <div class="footer-brand">

@@ -335,6 +335,171 @@
       </div>
     </section>
 
+    <section
+      id="statistics"
+      style="padding: 100px 5%; max-width: 1200px; margin: 0 auto"
+    >
+      <style>
+        .stats-header-wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 40px;
+        }
+        .stats-main-title {
+          font-size: 2.2rem;
+          font-weight: 800;
+          color: var(--text, #ffffff);
+          letter-spacing: -0.5px;
+        }
+        .live-data-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 8px 18px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 30px;
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: var(--text, #ffffff);
+        }
+        .pulse-dot {
+          width: 10px;
+          height: 10px;
+          background-color: #4ade80;
+          border-radius: 50%;
+          box-shadow: 0 0 12px #4ade80;
+        }
+        .stats-grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 24px;
+        }
+        .stat-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .stat-top h3 {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 25px;
+        }
+        .stat-number-val {
+          font-size: 5rem;
+          font-weight: 800;
+          line-height: 1;
+          margin-bottom: 20px;
+        }
+        .stat-description {
+          font-size: 1.05rem;
+          font-weight: 500;
+        }
+        .stats-right-column {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+        .rating-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-grow: 1;
+        }
+        .rating-label {
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+        }
+        .stars-wrapper {
+          font-size: 1.8rem;
+          letter-spacing: 2px;
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+        }
+        .rating-num {
+          font-size: 2.2rem;
+          font-weight: 800;
+        }
+        .rating-subtext {
+          font-size: 1rem;
+        }
+        @media (max-width: 992px) {
+          .stats-grid-container {
+            grid-template-columns: 1fr;
+          }
+          .stats-header-wrap {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+          }
+        }
+      </style>
+
+      <div class="reveal">
+        <div class="stats-header-wrap">
+          <h2 class="stats-main-title">Counter / Statistics</h2>
+          <div class="live-data-badge">
+            <span class="pulse-dot"></span>
+            Data Updated Live
+          </div>
+        </div>
+
+        <div class="stats-grid-container">
+          <div class="stat-box review-card">
+            <div class="stat-top">
+              <h3>10+ Years of Experience</h3>
+            </div>
+            <div>
+              <div class="stat-number-val">10+</div>
+              <div class="stat-description review-quote">
+                Driving Innovation
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-box review-card">
+            <div class="stat-top">
+              <h3>50+ Projects Completed</h3>
+            </div>
+            <div>
+              <div class="stat-number-val">50+</div>
+              <div class="stat-description review-quote">
+                Successful Partnerships
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-right-column">
+            <div class="stat-box review-card">
+              <div class="stat-top">
+                <h3 style="margin-bottom: 15px">100% Happy Clients</h3>
+              </div>
+              <div>
+                <div class="stat-number-val" style="font-size: 4.2rem">
+                  100%
+                </div>
+                <div class="stat-description review-quote">
+                  Verified Feedback
+                </div>
+              </div>
+            </div>
+
+            <div class="rating-box review-card">
+              <div class="rating-label">Averaging a</div>
+              <div class="stars-wrapper review-stars">
+                ★★★★★ <span class="rating-num">4.9</span>
+              </div>
+              <div class="rating-subtext review-quote">out of 5 Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer-grid">
         <div class="footer-brand">
