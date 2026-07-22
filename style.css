@@ -47,7 +47,7 @@
 
   /* Typography */
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Spacing */
   --section-padding: clamp(80px, 10vw, 140px);
@@ -435,9 +435,9 @@ nav.scrolled {
 h1.hero-headline {
   font-family: var(--font-heading);
   font-size: clamp(3.2rem, 6.5vw, 5.5rem);
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   margin-bottom: 28px;
 }
 .hero-headline .accent {
@@ -742,9 +742,9 @@ section {
 h2.section-title {
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   margin-bottom: 18px;
 }
 
