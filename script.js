@@ -417,23 +417,38 @@ function initThreeJSHero() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Geometry: Torus Knot
-  const geometry = new THREE.TorusKnotGeometry(12, 3, 100, 16);
+  // Geometry: Infinity Symbol
+  class InfinityCurve extends THREE.Curve {
+    constructor(scale = 1) {
+      super();
+      this.scale = scale;
+    }
+    getPoint(t, optionalTarget = new THREE.Vector3()) {
+      const s = t * Math.PI * 2;
+      const x = this.scale * (Math.sin(s) / (1 + Math.pow(Math.cos(s), 2)));
+      const y = this.scale * (Math.sin(s) * Math.cos(s) / (1 + Math.pow(Math.cos(s), 2)));
+      const z = Math.sin(s * 2) * (this.scale * 0.25);
+      return optionalTarget.set(x, y, z);
+    }
+  }
+  const path = new InfinityCurve(14);
+  const geometry = new THREE.TubeGeometry(path, 150, 1.2, 16, true);
+  
   // Material: Wireframe with Knootix Accent
   const material = new THREE.MeshBasicMaterial({ 
     color: 0x4db88a, 
     wireframe: true,
     transparent: true,
-    opacity: 0.15
+    opacity: 0.2
   });
-  const torusKnot = new THREE.Mesh(geometry, material);
+  const infinityMesh = new THREE.Mesh(geometry, material);
   
   // Position it to the right
-  torusKnot.position.x = 15;
-  torusKnot.position.y = 0;
-  torusKnot.position.z = -20;
+  infinityMesh.position.x = 15;
+  infinityMesh.position.y = 0;
+  infinityMesh.position.z = -20;
   
-  scene.add(torusKnot);
+  scene.add(infinityMesh);
   camera.position.z = 10;
 
   let mouseX = 0;
@@ -449,14 +464,14 @@ function initThreeJSHero() {
   function animate() {
     requestAnimationFrame(animate);
     
-    torusKnot.rotation.x += 0.002;
-    torusKnot.rotation.y += 0.003;
+    infinityMesh.rotation.x += 0.002;
+    infinityMesh.rotation.y += 0.003;
 
     targetX = mouseX * 0.001;
     targetY = mouseY * 0.001;
     
-    torusKnot.rotation.x += 0.05 * (targetY - torusKnot.rotation.x);
-    torusKnot.rotation.y += 0.05 * (targetX - torusKnot.rotation.y);
+    infinityMesh.rotation.x += 0.05 * (targetY - infinityMesh.rotation.x);
+    infinityMesh.rotation.y += 0.05 * (targetX - infinityMesh.rotation.y);
 
     renderer.render(scene, camera);
   }
