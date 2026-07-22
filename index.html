@@ -1,589 +1,562 @@
 <!doctype html>
-
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Knootix — Creative Studio</title>
-
+    <title>Knootix — Premium Creative Studio | Design, Development & Branding</title>
+    <meta name="description" content="Knootix is a premium creative studio delivering elite-level design, web development, video editing, and branding. Based in Lahore, serving clients worldwide." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
+    <!-- SVG Symbols -->
     <svg style="display: none">
-      <symbol id="icon-mail" viewBox="0 0 24 24">
-        <path
-          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-        />
-      </symbol>
-
-      <symbol id="icon-instagram" viewBox="0 0 24 24">
-        <path
-          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-        />
-      </symbol>
-
-      <symbol id="icon-location" viewBox="0 0 24 24">
-        <path
-          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-        />
-      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
     </svg>
 
+    <!-- Navigation -->
     <nav>
       <a href="index.html" class="nav-logo">
-        <img
-          src="assets/knootix-logo.png"
-          alt="Knootix"
-          class="site-logo site-logo--light"
-        />
-
-        <img
-          src="assets/knootix-logo-dark.png"
-          alt="Knootix"
-          class="site-logo site-logo--dark"
-        />
+        <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+        <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
       </a>
-
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
-
         <li><a href="work.html">Work</a></li>
-
         <li><a href="reviews.html">Reviews</a></li>
-
         <li><a href="about.html">About</a></li>
-
         <li><a href="blogs.html">Blogs</a></li>
-
         <li><a href="contact.html">Contact</a></li>
       </ul>
-
       <div class="nav-right">
         <button class="theme-toggle" onclick="toggleTheme()">
           <span class="theme-icon" id="themeIcon">☀️</span>
-
           <span id="themeLabel">Light</span>
         </button>
-
         <a href="contact.html" class="nav-cta">Get in Touch</a>
-
         <div class="hamburger" onclick="toggleMobileMenu()">
           <span></span><span></span><span></span>
         </div>
       </div>
     </nav>
 
-    <div
-      id="mobileMenu"
-      style="
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        background: var(--bg);
-        padding: 80px 5% 40px;
-        flex-direction: column;
-        gap: 32px;
-      "
-    >
-      <a
-        href="index.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Home</a
-      >
-
-      <a
-        href="services.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Services</a
-      >
-
-      <a
-        href="work.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Work</a
-      >
-
-      <a
-        href="reviews.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Reviews</a
-      >
-
-      <a
-        href="about.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >About</a
-      >
-
-      <a
-        href="blogs.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Blogs</a
-      >
-
-      <a
-        href="contact.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Contact</a
-      >
-
-      <button
-        onclick="closeMobileMenu()"
-        style="
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background: none;
-          border: none;
-          font-size: 1.8rem;
-          color: var(--text);
-          cursor: pointer;
-        "
-      >
-        ✕
-      </button>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="services.html" onclick="closeMobileMenu()">Services</a>
+      <a href="work.html" onclick="closeMobileMenu()">Work</a>
+      <a href="reviews.html" onclick="closeMobileMenu()">Reviews</a>
+      <a href="about.html" onclick="closeMobileMenu()">About</a>
+      <a href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+      <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
     </div>
 
+    <!-- ============ HERO ============ -->
     <section id="hero">
       <div class="hero-glow"></div>
+      <div class="hero-glow-2"></div>
 
       <div class="hero-content">
         <div class="hero-badge">Creative Studio — Lahore, Pakistan</div>
-
         <h1 class="hero-headline">
-          We Build<br />
-
-          <span class="accent">Bold</span> Digital<br />
-
+          We Craft<br />
+          <span class="accent">Premium</span> Digital<br />
           Experiences
         </h1>
-
         <p class="hero-sub">
-          From pixel-perfect design to powerful web solutions — Knootix
-          transforms ideas into impactful digital realities.
+          From pixel-perfect design to powerful web solutions — Knootix transforms ideas into impactful digital realities that elevate brands worldwide.
         </p>
-
         <div class="hero-actions">
           <a href="work.html" class="btn-primary">View Our Work →</a>
-
           <a href="contact.html" class="btn-ghost">Start a Project</a>
         </div>
-
         <div class="hero-metrics">
           <div class="metric">
-            <span class="metric-num" id="yearsCount">0</span>
-
-            <span class="metric-label">Years of Experience</span>
+            <span class="metric-num" data-target="10" data-suffix="">0</span>
+            <span class="metric-label">Years Experience</span>
           </div>
-
           <div class="metric-divider"></div>
-
           <div class="metric">
-            <span class="metric-num" id="countriesCount">0</span>
-
-            <span class="metric-label">Countries Worked With</span>
+            <span class="metric-num" data-target="12" data-suffix="">0</span>
+            <span class="metric-label">Countries Served</span>
           </div>
-
           <div class="metric-divider"></div>
-
           <div class="metric">
-            <span class="metric-num" id="projectsCount">0+</span>
-
+            <span class="metric-num" data-target="80" data-suffix="+">0</span>
             <span class="metric-label">Projects Delivered</span>
           </div>
         </div>
       </div>
+
+      <div class="hero-visual" id="heroVisual">
+        <div class="hero-showcase">
+          <div class="hero-showcase-main">
+            <img src="assets/portfolio/hero-showcase.jpg" alt="Knootix — Premium website design showcase" loading="eager" />
+          </div>
+          <!-- Floating Cards -->
+          <div class="hero-float-card float-card-1" data-parallax="0.03">
+            <div class="float-icon">⚡</div>
+            <div>
+              <div class="float-label">Performance</div>
+              <div class="float-value">99 / 100</div>
+            </div>
+          </div>
+          <div class="hero-float-card float-card-2" data-parallax="0.05">
+            <div class="float-icon">🎨</div>
+            <div>
+              <div class="float-label">Design Quality</div>
+              <div class="float-value">Award-Winning</div>
+            </div>
+          </div>
+          <div class="hero-float-card float-card-3" data-parallax="0.04">
+            <div class="float-icon">★</div>
+            <div>
+              <div class="float-label">Client Rating</div>
+              <div class="float-value">4.9 / 5.0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
 
-    <div class="marquee-section">
-      <div class="marquee-track" id="marquee">
-        <span class="marquee-item">Eleva</span>
-
-        <span class="marquee-item">Jagir Shoe Brand</span>
-
-        <span class="marquee-item">Richer Group</span>
-
-        <span class="marquee-item">Rise and Real</span>
-
-        <span class="marquee-item">TeoriProve.net</span>
-
-        <span class="marquee-item">Blyndex</span>
-
-        <span class="marquee-item">Eleva</span>
-
-        <span class="marquee-item">Jagir Shoe Brand</span>
-
-        <span class="marquee-item">Richer Group</span>
-
-        <span class="marquee-item">Rise and Real</span>
-
-        <span class="marquee-item">TeoriProve.net</span>
-
-        <span class="marquee-item">Blyndex</span>
-
-        <span class="marquee-item">Eleva</span>
-
-        <span class="marquee-item">Jagir Shoe Brand</span>
-
-        <span class="marquee-item">Richer Group</span>
-
-        <span class="marquee-item">Rise and Real</span>
-
-        <span class="marquee-item">TeoriProve.net</span>
-
-        <span class="marquee-item">Blyndex</span>
-
-        <span class="marquee-item">Eleva</span>
-
-        <span class="marquee-item">Jagir Shoe Brand</span>
-
-        <span class="marquee-item">Richer Group</span>
-
-        <span class="marquee-item">Rise and Real</span>
-
-        <span class="marquee-item">TeoriProve.net</span>
-
-        <span class="marquee-item">Blyndex</span>
+    <!-- ============ TRUSTED BY / CLIENT LOGOS ============ -->
+    <div class="trusted-section">
+      <div class="trusted-inner">
+        <span class="trusted-label">Trusted By</span>
+        <div class="trusted-logos">
+          <span class="trusted-logo">Eleva</span>
+          <span class="trusted-logo">Jagir</span>
+          <span class="trusted-logo">Richer Group</span>
+          <span class="trusted-logo">Rise & Real</span>
+          <span class="trusted-logo">TeoriProve</span>
+          <span class="trusted-logo">Blyndex</span>
+        </div>
       </div>
     </div>
 
-    <style>
-      .why-knootix-section {
-        padding: 120px 5%;
-        max-width: 1400px;
-        margin: 0 auto;
-        color: var(--text);
-      }
+    <!-- ============ FEATURED PROJECTS ============ -->
+    <section id="featured-work">
+      <div class="section-header reveal">
+        <div class="section-label">Selected Work</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Recent projects that showcase our commitment to premium design, strategic thinking, and flawless execution.</p>
+      </div>
 
-      .why-knootix-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: flex-start;
-      }
+      <div class="featured-grid">
+        <div class="featured-card featured-card--large reveal">
+          <span class="featured-card-tag">Web Development</span>
+          <img class="featured-card-img" src="assets/portfolio/project-web-design.jpg" alt="Aetherial Realty — Luxury real estate platform" loading="lazy" />
+          <div class="featured-card-overlay">
+            <div>
+              <div class="featured-card-category">Web Development</div>
+              <h3 class="featured-card-title">Aetherial Realty Platform</h3>
+              <p class="featured-card-desc">A luxury real estate website with advanced property search, interactive maps, and seamless user experience.</p>
+              <a href="work.html" class="featured-card-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-      .why-left-content {
-        position: sticky;
-        top: 120px;
-      }
+        <div class="featured-card featured-card--standard reveal stagger-1">
+          <span class="featured-card-tag">Branding</span>
+          <img class="featured-card-img" src="assets/portfolio/project-branding.jpg" alt="Verdi — Complete brand identity" loading="lazy" />
+          <div class="featured-card-overlay">
+            <div>
+              <div class="featured-card-category">Brand Identity</div>
+              <h3 class="featured-card-title">Verdi Brand System</h3>
+              <p class="featured-card-desc">Complete brand identity including logo, guidelines, stationery, and digital assets.</p>
+              <a href="work.html" class="featured-card-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-      .why-badge {
-        display: inline-block;
-        text-transform: uppercase;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        padding: 6px 16px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 50px;
-        margin-bottom: 24px;
-        opacity: 0.8;
-      }
+        <div class="featured-card featured-card--standard reveal stagger-2">
+          <span class="featured-card-tag">App Design</span>
+          <img class="featured-card-img" src="assets/portfolio/project-app-design.jpg" alt="SocialHub — Social media management app" loading="lazy" />
+          <div class="featured-card-overlay">
+            <div>
+              <div class="featured-card-category">UI/UX Design</div>
+              <h3 class="featured-card-title">SocialHub Dashboard</h3>
+              <p class="featured-card-desc">Cross-platform social media management app with analytics and engagement tools.</p>
+              <a href="work.html" class="featured-card-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-      .why-headline {
-        font-size: clamp(2.5rem, 4vw, 3.8rem);
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        margin: 0;
-      }
+        <div class="featured-card featured-card--standard reveal stagger-3">
+          <span class="featured-card-tag">Video Production</span>
+          <img class="featured-card-img" src="assets/portfolio/project-video-editing.jpg" alt="Cinema Edit Studio — Professional video editing" loading="lazy" />
+          <div class="featured-card-overlay">
+            <div>
+              <div class="featured-card-category">Video Editing</div>
+              <h3 class="featured-card-title">Cinema Edit Studio</h3>
+              <p class="featured-card-desc">Professional color grading, VFX compositing, and cinematic editing for brand films.</p>
+              <a href="work.html" class="featured-card-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
 
-      .why-right-content {
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-      }
+        <div class="featured-card featured-card--standard reveal stagger-4">
+          <span class="featured-card-tag">Social Media</span>
+          <img class="featured-card-img" src="assets/portfolio/project-social-media.jpg" alt="Social media design templates" loading="lazy" />
+          <div class="featured-card-overlay">
+            <div>
+              <div class="featured-card-category">Graphic Design</div>
+              <h3 class="featured-card-title">Social Campaign Kit</h3>
+              <p class="featured-card-desc">Comprehensive social media design system with templates, stories, and campaign visuals.</p>
+              <a href="work.html" class="featured-card-link">View Case Study →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      .why-card {
-        padding-bottom: 40px;
-        margin-bottom: 40px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
+    <!-- ============ SERVICES OVERVIEW ============ -->
+    <section id="services">
+      <div class="section-header reveal">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Services That<br />Drive Results</h2>
+        <p class="section-desc">End-to-end creative and technical solutions built for modern brands that want to stand out.</p>
+      </div>
 
-      .why-card:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
+      <div class="services-grid">
+        <a href="service-video-editing.html" class="service-card reveal stagger-1">
+          <span class="service-num">01</span>
+          <div class="service-icon-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3>Video Editing</h3>
+          <p>Cinematic reels, brand films, color grading, motion graphics, and social-optimized content that captivates audiences.</p>
+          <div class="service-card-arrow">Explore Service →</div>
+        </a>
 
-      .why-card h3 {
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-bottom: 16px;
-        margin-top: 0;
-      }
+        <a href="service-graphic-design.html" class="service-card reveal stagger-2">
+          <span class="service-num">02</span>
+          <div class="service-icon-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>Brand identity, logos, marketing collateral, social media kits, packaging, and complete visual systems that define your brand.</p>
+          <div class="service-card-arrow">Explore Service →</div>
+        </a>
 
-      .why-card p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        opacity: 0.75;
-        margin: 0;
-      }
+        <a href="service-web-development.html" class="service-card reveal stagger-3">
+          <span class="service-num">03</span>
+          <div class="service-icon-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Custom responsive websites, landing pages, e-commerce platforms, web apps, SEO optimization, and ongoing support.</p>
+          <div class="service-card-arrow">Explore Service →</div>
+        </a>
 
-      @media (max-width: 968px) {
-        .why-knootix-grid {
-          grid-template-columns: 1fr;
-          gap: 60px;
-        }
-        .why-left-content {
-          position: static;
-        }
-      }
-    </style>
+        <a href="service-photography.html" class="service-card reveal stagger-4">
+          <span class="service-num">04</span>
+          <div class="service-icon-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <h3>Photography</h3>
+          <p>Product photography, commercial shoots, corporate headshots, event coverage, and professional post-processing.</p>
+          <div class="service-card-arrow">Explore Service →</div>
+        </a>
+      </div>
+    </section>
 
-    <section class="why-knootix-section">
+    <!-- ============ WHY KNOOTIX ============ -->
+    <section class="why-knootix-section section-darker">
       <div class="why-knootix-grid">
-        <div class="why-left-content">
+        <div class="why-left-content reveal">
           <div class="why-badge">Why Knootix</div>
           <h2 class="why-headline">
-            We get hired when "good enough" isn't enough.
+            We get hired when<br />"good enough"<br />isn't <span class="accent">enough</span>.
           </h2>
         </div>
 
         <div class="why-right-content">
-          <div class="why-card">
+          <div class="why-card reveal stagger-1">
             <h3 class="accent">Elite-level design quality.</h3>
-            <p>
-              We obsess over the details that average agencies skip —
-              pixel-perfect layouts, color science, and dynamic motion timing —
-              because they're exactly what separates the forgettable from the
-              unforgettable.
-            </p>
+            <p>We obsess over the details that average agencies skip — pixel-perfect layouts, color science, and dynamic motion timing — because they're exactly what separates the forgettable from the unforgettable.</p>
           </div>
-
-          <div class="why-card">
+          <div class="why-card reveal stagger-2">
             <h3 class="accent">Conversion-driven user experience.</h3>
-            <p>
-              Beautiful work that doesn't convert is merely decoration. Every
-              digital journey we map is intuitive, accessible, and strategically
-              engineered around achieving your measurable business outcomes.
-            </p>
+            <p>Beautiful work that doesn't convert is merely decoration. Every digital journey we map is intuitive, accessible, and strategically engineered around achieving your measurable business outcomes.</p>
           </div>
-
-          <div class="why-card">
+          <div class="why-card reveal stagger-3">
             <h3 class="accent">Strategic brand positioning.</h3>
-            <p>
-              We build enduring digital identities that command attention. Our
-              senior creative team crafts cohesive brand experiences that
-              resonate deeply and position you as an undisputed market leader.
-            </p>
+            <p>We build enduring digital identities that command attention. Our senior creative team crafts cohesive brand experiences that resonate deeply and position you as an undisputed market leader.</p>
           </div>
-
-          <div class="why-card">
+          <div class="why-card reveal stagger-4">
             <h3 class="accent">Flawless technical development.</h3>
-            <p>
-              Exceptional design demands robust engineering. We don't hide
-              juniors in the background; you get premium, blazing-fast, and
-              secure web solutions built by experts doing the craft.
-            </p>
+            <p>Exceptional design demands robust engineering. You get premium, blazing-fast, and secure web solutions built by experts who genuinely care about the craft.</p>
           </div>
-
-          <div class="why-card">
+          <div class="why-card reveal stagger-5">
             <h3 class="accent">Global perspective, bespoke solutions.</h3>
-            <p>
-              Rooted in creative excellence and serving brands worldwide. We
-              understand the nuances of diverse digital landscapes, delivering
-              tailored creative solutions without compromising your vision.
-            </p>
+            <p>Rooted in creative excellence and serving brands across 12+ countries. We understand the nuances of diverse digital landscapes, delivering tailored solutions without compromising your vision.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ============ OUR PROCESS ============ -->
+    <section id="process">
+      <div class="section-header reveal">
+        <div class="section-label">How We Work</div>
+        <h2 class="section-title">Our Process</h2>
+        <p class="section-desc">A proven methodology that transforms your vision into reality — efficiently, transparently, and on time.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step reveal stagger-1">
+          <div class="process-step-num">01</div>
+          <div class="process-step-connector"></div>
+          <h4>Discovery</h4>
+          <p>We learn your brand, goals, audience, and competitive landscape through deep research and strategy sessions.</p>
+        </div>
+        <div class="process-step reveal stagger-2">
+          <div class="process-step-num">02</div>
+          <div class="process-step-connector"></div>
+          <h4>Strategy</h4>
+          <p>We define the creative direction, technical architecture, and project roadmap with clear milestones.</p>
+        </div>
+        <div class="process-step reveal stagger-3">
+          <div class="process-step-num">03</div>
+          <div class="process-step-connector"></div>
+          <h4>Design</h4>
+          <p>Wireframes, concepts, and high-fidelity mockups are crafted and refined through collaborative feedback.</p>
+        </div>
+        <div class="process-step reveal stagger-4">
+          <div class="process-step-num">04</div>
+          <div class="process-step-connector"></div>
+          <h4>Development</h4>
+          <p>Clean, performant code brings the design to life with responsiveness, accessibility, and SEO built in.</p>
+        </div>
+        <div class="process-step reveal stagger-5">
+          <div class="process-step-num">05</div>
+          <h4>Launch & Support</h4>
+          <p>Thorough QA, seamless deployment, and ongoing support to ensure long-term success.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section id="testimonials">
+      <div class="section-header reveal">
+        <div class="section-label">Client Voices</div>
+        <h2 class="section-title">What They Say</h2>
+        <p class="section-desc">Real results, real relationships — from Lahore to the world.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="review-card reveal stagger-1">
+          <div class="review-stars">★★★★★ <span class="rating-num">5.0</span></div>
+          <p class="review-quote">"Knootix completely transformed our brand presence. The video editing work they did for our product launch exceeded every expectation. Highly professional, fast, and genuinely invested in our success."</p>
+          <div class="review-author">
+            <div class="review-avatar">AK</div>
+            <div>
+              <div class="review-name">Ahmad Khalid</div>
+              <div class="review-role">CEO, Eleva</div>
+              <div class="review-region">🇵🇰 Lahore, Pakistan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal stagger-2">
+          <span class="int-badge">International</span>
+          <div class="review-stars">★★★★★ <span class="rating-num">4.9</span></div>
+          <p class="review-quote">"Working with Knootix remotely was seamless. Their graphic design skills are world-class, and they understood our UK market perfectly. The branding package they created set a new standard for us."</p>
+          <div class="review-author">
+            <div class="review-avatar">JM</div>
+            <div>
+              <div class="review-name">James Mitchell</div>
+              <div class="review-role">Founder, Mitchell & Co</div>
+              <div class="review-region">🇬🇧 London, UK</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal stagger-3">
+          <span class="int-badge">International</span>
+          <div class="review-stars">★★★★★ <span class="rating-num">5.0</span></div>
+          <p class="review-quote">"Outstanding video editing services! The promotional videos they created for our tech startup were engaging and perfectly tailored to our audience. Highly recommended!"</p>
+          <div class="review-author">
+            <div class="review-avatar">MC</div>
+            <div>
+              <div class="review-name">Michael Chen</div>
+              <div class="review-role">CTO, TechWave</div>
+              <div class="review-region">🇨🇦 Toronto, Canada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq">
+      <div class="section-header reveal">
+        <div class="section-label">Answers</div>
+        <h2 class="section-title">Frequently Asked<br />Questions</h2>
+        <p class="section-desc">Everything you need to know about working with us.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item reveal" onclick="this.classList.toggle('active')">
+          <div class="faq-question">
+            <span>How long does a typical project take?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Timelines depend on project scope and complexity. A landing page can take 1–2 weeks, a full website 4–8 weeks, and a complete brand identity 3–6 weeks. During our discovery phase, we outline a detailed roadmap with clear milestones.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-1" onclick="this.classList.toggle('active')">
+          <div class="faq-question">
+            <span>What industries do you work with?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>We partner with forward-thinking brands across tech, e-commerce, lifestyle, healthcare, real estate, fashion, and corporate sectors. Our research-driven approach allows us to craft tailored solutions for any market.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-2" onclick="this.classList.toggle('active')">
+          <div class="faq-question">
+            <span>Do you work with international clients?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. Over 40% of our clients are based outside Pakistan, spanning the UK, UAE, Canada, and beyond. We use asynchronous workflows, shared project tools, and scheduled calls to ensure seamless collaboration across time zones.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-3" onclick="this.classList.toggle('active')">
+          <div class="faq-question">
+            <span>What does the design process look like?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>We follow a five-stage process: Discovery, Strategy, Design, Development, and Launch. Each stage includes check-ins and feedback rounds so you're always in the loop. We don't move forward until you're 100% happy with each phase.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-4" onclick="this.classList.toggle('active')">
+          <div class="faq-question">
+            <span>Do you offer post-launch support?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We believe in long-term partnerships. We offer comprehensive support packages including ongoing updates, security monitoring, performance optimization, and content changes to keep your digital assets performing at their best.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal stagger-5" onclick="this.classList.toggle('active')">
+          <div class="faq-question">
+            <span>How do I get started?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p>Simply reach out via our contact form, WhatsApp, or email. We'll schedule a free 30-minute discovery call to understand your needs, then follow up with a tailored proposal and timeline. No commitments until you're ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section id="final-cta">
+      <div class="cta-content reveal">
+        <h2>Ready to build something <span class="accent">extraordinary</span>?</h2>
+        <p>Let's discuss your next project. From initial concept to final launch, we'll bring your vision to life with premium creative and technical expertise.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">Start a Project →</a>
+          <a href="work.html" class="btn-ghost">Explore Our Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
     <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h3>Stay in the loop</h3>
+          <p>Get design insights, project showcases, and industry trends delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
-          <img
-            src="assets/knootix-logo.png"
-            alt="Knootix"
-            class="site-logo site-logo--light"
-          />
-
-          <img
-            src="assets/knootix-logo-dark.png"
-            alt="Knootix"
-            class="site-logo site-logo--dark"
-          />
-
-          <p>
-            Bold creative work for brands that refuse to be ordinary. Based in
-            Lahore, working worldwide.
-          </p>
+          <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+          <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+          <p>Bold creative work for brands that refuse to be ordinary. Based in Lahore, working worldwide.</p>
         </div>
-
         <div class="footer-col">
           <h4>Services</h4>
-
           <ul>
-            <li><a href="services.html">Video Editing</a></li>
-
-            <li><a href="services.html">Graphic Design</a></li>
-
-            <li><a href="services.html">Web Development</a></li>
-
-            <li><a href="services.html">Photography</a></li>
+            <li><a href="service-video-editing.html">Video Editing</a></li>
+            <li><a href="service-graphic-design.html">Graphic Design</a></li>
+            <li><a href="service-web-development.html">Web Development</a></li>
+            <li><a href="service-photography.html">Photography</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h4>Company</h4>
-
           <ul>
             <li><a href="about.html">About Us</a></li>
-
             <li><a href="work.html">Our Work</a></li>
-
             <li><a href="reviews.html">Testimonials</a></li>
-
+            <li><a href="blogs.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h4>Connect</h4>
-
           <ul>
             <li><a href="mailto:knootix@gmail.com">Email Us</a></li>
-
-            <li>
-              <a href="https://instagram.com/knootix" target="_blank"
-                >Instagram</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="https://wa.me/923414680668?text=Hello%20Knootix!"
-                target="_blank"
-                >WhatsApp</a
-              >
-            </li>
+            <li><a href="https://instagram.com/knootix" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank">WhatsApp</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>
-          © 2026 <span class="accent">Knootix</span>. All rights reserved.
-          Crafted with precision in Lahore 🇵🇰
-        </p>
-
+        <p>© 2026 <span class="accent">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
         <div class="social-links">
-          <a
-            href="https://instagram.com/knootix"
-            target="_blank"
-            class="social-link"
-            ><svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-instagram"></use></svg
-          ></a>
-
-          <a href="mailto:knootix@gmail.com" class="social-link"
-            ><svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-mail"></use></svg
-          ></a>
-
-          <a
-            href="https://wa.me/923414680668?text=Hello%20Knootix!"
-            target="_blank"
-            class="social-link"
-          >
+          <a href="https://instagram.com/knootix" target="_blank" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
+          <a href="mailto:knootix@gmail.com" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-mail"></use></svg></a>
+          <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="social-link">
             <svg class="svg-icon" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-              />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-              />
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <a
-      href="https://wa.me/923414680668?text=Hello%20Knootix!"
-      target="_blank"
-      class="whatsapp-float"
-      title="Chat on WhatsApp"
-    >
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
       <div class="wa-pulse"></div>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="#fff"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-        />
-        <path
-          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
       </svg>
     </a>
 

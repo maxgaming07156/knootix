@@ -6,49 +6,30 @@
     <title>Reviews | Knootix — Creative Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- SVG Symbols -->
     <svg style="display: none">
-      <symbol id="icon-mail" viewBox="0 0 24 24">
-        <path
-          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-        />
-      </symbol>
-      <symbol id="icon-instagram" viewBox="0 0 24 24">
-        <path
-          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-        />
-      </symbol>
-      <symbol id="icon-location" viewBox="0 0 24 24">
-        <path
-          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-        />
-      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
     </svg>
 
+    <!-- Navigation -->
     <nav>
       <a href="index.html" class="nav-logo">
-        <img
-          src="assets/knootix-logo.png"
-          alt="Knootix"
-          class="site-logo site-logo--light"
-        />
-        <img
-          src="assets/knootix-logo-dark.png"
-          alt="Knootix"
-          class="site-logo site-logo--dark"
-        />
+        <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+        <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -65,131 +46,29 @@
       </div>
     </nav>
 
-    <div
-      id="mobileMenu"
-      style="
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        background: var(--bg);
-        padding: 80px 5% 40px;
-        flex-direction: column;
-        gap: 32px;
-      "
-    >
-      <a
-        href="index.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Home</a
-      >
-      <a
-        href="services.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Services</a
-      >
-      <a
-        href="work.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Work</a
-      >
-      <a
-        href="reviews.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Reviews</a
-      >
-      <a
-        href="about.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >About</a
-      >
-      <a
-        href="blogs.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Blogs</a
-      >
-      <a
-        href="contact.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Contact</a
-      >
-      <button
-        onclick="closeMobileMenu()"
-        style="
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background: none;
-          border: none;
-          font-size: 1.8rem;
-          color: var(--text);
-          cursor: pointer;
-        "
-      >
-        ✕
-      </button>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="services.html" onclick="closeMobileMenu()">Services</a>
+      <a href="work.html" onclick="closeMobileMenu()">Work</a>
+      <a href="reviews.html" class="active" onclick="closeMobileMenu()">Reviews</a>
+      <a href="about.html" onclick="closeMobileMenu()">About</a>
+      <a href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+      <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
     </div>
 
-    <section id="reviews" style="padding-top: 150px; min-height: 100vh">
-      <div class="reveal">
+    <section id="reviews" class="section-padding">
+      <div class="section-header reveal">
         <div class="section-label">Client Voices</div>
         <h2 class="section-title">What Our Clients Say</h2>
         <p class="section-desc">
           Real results, real relationships — from Lahore to the world.
         </p>
       </div>
-      <div class="reviews-grid reveal">
-        <div class="review-card">
-          <div class="review-stars">★★★★★ 5.0</div>
+      <div class="testimonials-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★ <span class="rating-num">5.0</span></div>
           <p class="review-quote">
             "Knootix completely transformed our brand presence. The video
             editing work they did for our product launch exceeded every
@@ -200,12 +79,13 @@
             <div class="review-avatar">AK</div>
             <div>
               <div class="review-name">Ahmad Khalid</div>
+              <div class="review-role">Product Manager, Tech Innovators</div>
               <div class="review-region">🇵🇰 Lahore, Pakistan</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★ 4.8</div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★ <span class="rating-num">4.8</span></div>
           <p class="review-quote">
             "Our website went from outdated to stunning in record time. The team
             understood our vision immediately and delivered a polished,
@@ -215,13 +95,14 @@
             <div class="review-avatar">SR</div>
             <div>
               <div class="review-name">Sara Raza</div>
+              <div class="review-role">Founder, Retail Hub</div>
               <div class="review-region">🇵🇰 Karachi, Pakistan</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal">
           <span class="int-badge">International</span>
-          <div class="review-stars">★★★★★ 4.9</div>
+          <div class="review-stars">★★★★★ <span class="rating-num">4.9</span></div>
           <p class="review-quote">
             "Working with Knootix remotely was seamless. Their graphic design
             skills are world-class, and they understood our UK market perfectly.
@@ -231,12 +112,13 @@
             <div class="review-avatar">JM</div>
             <div>
               <div class="review-name">James Mitchell</div>
+              <div class="review-role">Director, Global Trends</div>
               <div class="review-region">🇬🇧 London, United Kingdom</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★☆ 4.5</div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★☆ <span class="rating-num">4.5</span></div>
           <p class="review-quote">
             "Exceptional photography that brought our products to life. Knootix
             has an eye for detail that's rare. Our e-commerce conversion jumped
@@ -246,12 +128,13 @@
             <div class="review-avatar">MB</div>
             <div>
               <div class="review-name">Muhammad Bilal</div>
+              <div class="review-role">E-commerce Manager, Elite Stores</div>
               <div class="review-region">🇵🇰 Islamabad, Pakistan</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★ 5.0</div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★ <span class="rating-num">5.0</span></div>
           <p class="review-quote">
             "From branding to a full digital strategy, Knootix delivered
             everything on time and with incredible quality. The team
@@ -262,13 +145,14 @@
             <div class="review-avatar">FS</div>
             <div>
               <div class="review-name">Fatima Sheikh</div>
+              <div class="review-role">Marketing Lead, NextGen</div>
               <div class="review-region">🇵🇰 Lahore, Pakistan</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal">
           <span class="int-badge">International</span>
-          <div class="review-stars">★★★★★ 4.9</div>
+          <div class="review-stars">★★★★★ <span class="rating-num">4.9</span></div>
           <p class="review-quote">
             "I hired Knootix for a full social media visual overhaul. Their
             design language is modern, bold, and on-brand every time.
@@ -279,13 +163,14 @@
             <div class="review-avatar">NA</div>
             <div>
               <div class="review-name">Noor Al-Rashidi</div>
+              <div class="review-role">Brand Manager, Desert Bloom</div>
               <div class="review-region">🇦🇪 Dubai, UAE</div>
             </div>
           </div>
         </div>
 
-        <div class="review-card">
-          <div class="review-stars">★★★★★ 4.8</div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★ <span class="rating-num">4.8</span></div>
           <p class="review-quote">
             "The web development team at Knootix is phenomenal. They took our
             complex requirements and built a seamless, user-friendly platform
@@ -295,14 +180,15 @@
             <div class="review-avatar">ZT</div>
             <div>
               <div class="review-name">Zainab Tariq</div>
+              <div class="review-role">CEO, Web Solutions PK</div>
               <div class="review-region">🇵🇰 Multan, Pakistan</div>
             </div>
           </div>
         </div>
 
-        <div class="review-card">
+        <div class="review-card reveal">
           <span class="int-badge">International</span>
-          <div class="review-stars">★★★★★ 5.0</div>
+          <div class="review-stars">★★★★★ <span class="rating-num">5.0</span></div>
           <p class="review-quote">
             "Outstanding video editing services! The promotional videos they
             created for our tech startup were engaging and perfectly tailored to
@@ -312,13 +198,14 @@
             <div class="review-avatar">MC</div>
             <div>
               <div class="review-name">Michael Chen</div>
+              <div class="review-role">CTO, DataSync Canada</div>
               <div class="review-region">🇨🇦 Toronto, Canada</div>
             </div>
           </div>
         </div>
 
-        <div class="review-card">
-          <div class="review-stars">★★★★☆ 4.4</div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★☆ <span class="rating-num">4.4</span></div>
           <p class="review-quote">
             "Their graphic design work is incredibly creative. They revamped our
             entire brand identity, from the logo to the marketing materials,
@@ -328,6 +215,7 @@
             <div class="review-avatar">AH</div>
             <div>
               <div class="review-name">Ali Hassan</div>
+              <div class="review-role">Director, Nexus Brand</div>
               <div class="review-region">🇵🇰 Faisalabad, Pakistan</div>
             </div>
           </div>
@@ -335,196 +223,65 @@
       </div>
     </section>
 
-    <section
-      id="statistics"
-      style="padding: 100px 5%; max-width: 1200px; margin: 0 auto"
-    >
-      <style>
-        .stats-header-wrap {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 40px;
-        }
-        .stats-main-title {
-          font-size: 2.2rem;
-          font-weight: 800;
-          color: var(--text, #ffffff);
-          letter-spacing: -0.5px;
-        }
-        .live-data-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 8px 18px;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 30px;
-          font-size: 0.95rem;
-          font-weight: 500;
-          color: var(--text, #ffffff);
-        }
-        .pulse-dot {
-          width: 10px;
-          height: 10px;
-          background-color: #4ade80;
-          border-radius: 50%;
-          box-shadow: 0 0 12px #4ade80;
-        }
-        .stats-grid-container {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 24px;
-        }
-        .stat-box {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-        .stat-top h3 {
-          font-size: 1.2rem;
-          font-weight: 600;
-          margin-bottom: 25px;
-        }
-        .stat-number-val {
-          font-size: 5rem;
-          font-weight: 800;
-          line-height: 1;
-          margin-bottom: 20px;
-        }
-        .stat-description {
-          font-size: 1.05rem;
-          font-weight: 500;
-        }
-        .stats-right-column {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-        }
-        .rating-box {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          flex-grow: 1;
-        }
-        .rating-label {
-          font-size: 1.1rem;
-          margin-bottom: 10px;
-        }
-        .stars-wrapper {
-          font-size: 1.8rem;
-          letter-spacing: 2px;
-          margin-bottom: 5px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 12px;
-        }
-        .rating-num {
-          font-size: 2.2rem;
-          font-weight: 800;
-        }
-        .rating-subtext {
-          font-size: 1rem;
-        }
-        @media (max-width: 992px) {
-          .stats-grid-container {
-            grid-template-columns: 1fr;
-          }
-          .stats-header-wrap {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 15px;
-          }
-        }
-      </style>
-
-      <div class="reveal">
-        <div class="stats-header-wrap">
-          <h2 class="stats-main-title">Counter / Statistics</h2>
-          <div class="live-data-badge">
-            <span class="pulse-dot"></span>
-            Data Updated Live
-          </div>
+    <!-- COUNTER / STATISTICS SECTION -->
+    <section id="statistics" class="section-darker" style="padding: 100px 5%;">
+      <div class="section-header reveal">
+        <h2 class="section-title">By the Numbers</h2>
+        <div class="live-data-badge" style="display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 30px; font-size: 0.95rem; font-weight: 500; margin-top: 20px;">
+          <span style="width: 10px; height: 10px; background-color: #4ade80; border-radius: 50%; box-shadow: 0 0 12px #4ade80;"></span>
+          Data Updated Live
         </div>
+      </div>
 
-        <div class="stats-grid-container">
-          <div class="stat-box review-card">
-            <div class="stat-top">
-              <h3>10+ Years of Experience</h3>
-            </div>
-            <div>
-              <div class="stat-number-val">10+</div>
-              <div class="stat-description review-quote">
-                Driving Innovation
-              </div>
-            </div>
-          </div>
-
-          <div class="stat-box review-card">
-            <div class="stat-top">
-              <h3>50+ Projects Completed</h3>
-            </div>
-            <div>
-              <div class="stat-number-val">50+</div>
-              <div class="stat-description review-quote">
-                Successful Partnerships
-              </div>
-            </div>
-          </div>
-
-          <div class="stats-right-column">
-            <div class="stat-box review-card">
-              <div class="stat-top">
-                <h3 style="margin-bottom: 15px">100% Happy Clients</h3>
-              </div>
-              <div>
-                <div class="stat-number-val" style="font-size: 4.2rem">
-                  100%
-                </div>
-                <div class="stat-description review-quote">
-                  Verified Feedback
-                </div>
-              </div>
-            </div>
-
-            <div class="rating-box review-card">
-              <div class="rating-label">Averaging a</div>
-              <div class="stars-wrapper review-stars">
-                ★★★★★ <span class="rating-num">4.9</span>
-              </div>
-              <div class="rating-subtext review-quote">out of 5 Rating</div>
-            </div>
-          </div>
+      <div class="hero-metrics reveal" style="justify-content: center; margin-top: 40px; background: var(--card-bg, rgba(128, 128, 128, 0.05)); padding: 40px; border-radius: 20px; border: 1px solid var(--border, rgba(128, 128, 128, 0.1));">
+        <div class="metric">
+          <span class="metric-num" data-target="10" data-suffix="+">0</span>
+          <span class="metric-label">Years Experience</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-num" data-target="80" data-suffix="+">0</span>
+          <span class="metric-label">Projects Completed</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-num" data-target="100" data-suffix="%">0</span>
+          <span class="metric-label">Happy Clients</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <span class="metric-num" data-target="4.9" data-suffix="/5">0</span>
+          <span class="metric-label">Average Rating</span>
         </div>
       </div>
     </section>
+
+    <!-- ============ FOOTER ============ -->
     <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h3>Stay in the loop</h3>
+          <p>Get design insights, project showcases, and industry trends delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
-          <img
-            src="assets/knootix-logo.png"
-            alt="Knootix"
-            class="site-logo site-logo--light"
-          />
-          <img
-            src="assets/knootix-logo-dark.png"
-            alt="Knootix"
-            class="site-logo site-logo--dark"
-          />
-          <p>
-            Bold creative work for brands that refuse to be ordinary. Based in
-            Lahore, working worldwide.
-          </p>
+          <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+          <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+          <p>Bold creative work for brands that refuse to be ordinary. Based in Lahore, working worldwide.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html">Video Editing</a></li>
-            <li><a href="services.html">Graphic Design</a></li>
-            <li><a href="services.html">Web Development</a></li>
-            <li><a href="services.html">Photography</a></li>
+            <li><a href="service-video-editing.html">Video Editing</a></li>
+            <li><a href="service-graphic-design.html">Graphic Design</a></li>
+            <li><a href="service-web-development.html">Web Development</a></li>
+            <li><a href="service-photography.html">Photography</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -533,6 +290,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="work.html">Our Work</a></li>
             <li><a href="reviews.html">Testimonials</a></li>
+            <li><a href="blogs.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -540,76 +298,37 @@
           <h4>Connect</h4>
           <ul>
             <li><a href="mailto:knootix@gmail.com">Email Us</a></li>
-            <li>
-              <a href="https://instagram.com/knootix" target="_blank"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/923414680668?text=Hello%20Knootix!"
-                target="_blank"
-                >WhatsApp</a
-              >
-            </li>
+            <li><a href="https://instagram.com/knootix" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank">WhatsApp</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>
-          © 2026 <span class="accent">Knootix</span>. All rights reserved.
-          Crafted with precision in Lahore 🇵🇰
-        </p>
+        <p>© 2026 <span class="accent">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
         <div class="social-links">
-          <a
-            href="https://instagram.com/knootix"
-            target="_blank"
-            class="social-link"
-            ><svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-instagram"></use></svg
-          ></a>
-          <a href="mailto:knootix@gmail.com" class="social-link"
-            ><svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-mail"></use></svg
-          ></a>
-          <a
-            href="https://wa.me/923414680668?text=Hello%20Knootix!"
-            target="_blank"
-            class="social-link"
-          >
+          <a href="https://instagram.com/knootix" target="_blank" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
+          <a href="mailto:knootix@gmail.com" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-mail"></use></svg></a>
+          <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="social-link">
             <svg class="svg-icon" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-              />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-              />
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <a
-      href="https://wa.me/923414680668?text=Hello%20Knootix!"
-      target="_blank"
-      class="whatsapp-float"
-      title="Chat on WhatsApp"
-    >
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
       <div class="wa-pulse"></div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="#fff"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-        />
-        <path
-          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
       </svg>
     </a>
 

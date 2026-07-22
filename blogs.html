@@ -7,603 +7,37 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-
-    <style>
-      .blog-header {
-        text-align: center;
-        padding: 120px 20px 60px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      .blog-header h1 {
-        font-family: "Inter", sans-serif;
-        font-size: 3.5rem;
-        font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 16px;
-        letter-spacing: -0.02em;
-        color: var(--text);
-      }
-      .blog-header h1 .accent-text {
-        color: var(--text);
-      }
-      .blog-header p {
-        font-family: "Inter", sans-serif;
-        font-size: 1.2rem;
-        color: var(--text);
-        opacity: 0.75;
-        line-height: 1.6;
-        margin-bottom: 40px;
-      }
-      .search-container {
-        position: relative;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      .search-input {
-        width: 100%;
-        padding: 16px 24px 16px 48px;
-        border-radius: 50px;
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        background-color: var(--bg);
-        color: var(--text);
-        font-size: 1rem;
-        font-family: "Inter", sans-serif;
-        transition:
-          border-color 0.3s ease,
-          box-shadow 0.3s ease;
-        box-sizing: border-box;
-      }
-      .search-input:focus {
-        outline: none;
-        border-color: var(--text);
-        box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.05);
-      }
-      .search-icon {
-        position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        fill: var(--text);
-        opacity: 0.8;
-      }
-      .search-dropdown {
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 0;
-        width: 100%;
-        background: var(--bg);
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        z-index: 50;
-        display: none;
-        max-height: 350px;
-        overflow-y: auto;
-        text-align: left;
-      }
-      .search-result-item {
-        padding: 16px 24px;
-        border-bottom: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        cursor: pointer;
-        transition: background 0.2s ease;
-      }
-      .search-result-item:hover {
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-      }
-      .search-result-item:last-child {
-        border-bottom: none;
-      }
-      .search-result-title {
-        color: var(--text);
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 1.1rem;
-        margin: 0 0 4px 0;
-      }
-      .search-result-desc {
-        font-family: "Inter", sans-serif;
-        color: var(--text);
-        opacity: 0.75;
-        font-size: 0.9rem;
-        line-height: 1.6;
-        margin: 0;
-      }
-
-      /* --- Blog Layout & Grid --- */
-      .blog-container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 20px 100px;
-        display: grid;
-        grid-template-columns: 1fr 320px;
-        gap: 40px;
-      }
-      .section-title {
-        font-family: "Inter", sans-serif;
-        font-size: 2rem;
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        margin-bottom: 30px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text);
-      }
-      .section-title .accent-text {
-        color: var(--text);
-      }
-      .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 24px;
-      }
-
-      /* --- Blog/Project Card --- */
-      .blog-card {
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-        border-radius: 16px;
-        padding: 24px;
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease,
-          border-color 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-      }
-      .blog-card:hover {
-        transform: translateY(-4px);
-        border-color: var(--text);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
-      .card-image-placeholder {
-        width: 100%;
-        height: 180px;
-        border-radius: 12px;
-        background: var(--bg);
-        margin-bottom: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .card-image-placeholder svg {
-        width: 48px;
-        height: 48px;
-        fill: var(--text);
-        opacity: 0.8;
-      }
-      .card-meta-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
-        font-size: 0.9rem;
-        color: var(--text);
-        opacity: 0.8;
-      }
-      .card-author {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 500;
-        color: var(--text);
-      }
-      .card-title {
-        font-family: "Inter", sans-serif;
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin: 0 0 12px 0;
-        line-height: 1.4;
-        color: var(--text);
-      }
-      .card-excerpt {
-        font-family: "Inter", sans-serif;
-        color: var(--text);
-        opacity: 0.75;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 24px;
-        flex-grow: 1;
-      }
-      .card-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 24px;
-      }
-      .tag {
-        padding: 4px 12px;
-        border-radius: 50px;
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        font-family: "Inter", sans-serif;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--text);
-        opacity: 0.8;
-        background: transparent;
-      }
-      .read-more {
-        font-family: "Inter", sans-serif;
-        color: var(--text);
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: auto;
-      }
-
-      /* --- Single Project Detail View --- */
-      #project-detail {
-        display: none;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 60px 20px 100px;
-        animation: fadeIn 0.4s ease forwards;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* --- UPDATED BACK BUTTON --- */
-      .back-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        color: var(--text);
-        font-size: 0.95rem;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
-        cursor: pointer;
-        padding: 10px 20px;
-        border-radius: 50px;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        transition: all 0.3s ease;
-      }
-      .back-btn:hover {
-        background: var(--bg);
-        border-color: var(--text);
-        color: var(--text);
-        transform: translateX(-4px);
-      }
-
-      .detail-title {
-        font-family: "Inter", sans-serif;
-        font-size: 3rem;
-        font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 24px;
-        letter-spacing: -0.02em;
-        color: var(--text);
-      }
-      .detail-meta {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 48px;
-        padding-bottom: 24px;
-        border-bottom: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-      }
-      .detail-content h3 {
-        font-family: "Inter", sans-serif;
-        font-size: 1.6rem;
-        font-weight: 600;
-        margin: 40px 0 16px 0;
-        color: var(--text);
-      }
-      .detail-content p {
-        font-family: "Inter", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: var(--text);
-        opacity: 0.75;
-        margin-bottom: 24px;
-      }
-      .detail-content ul {
-        padding-left: 24px;
-        margin-bottom: 32px;
-      }
-      .detail-content li {
-        font-family: "Inter", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: var(--text);
-        opacity: 0.75;
-        margin-bottom: 12px;
-      }
-      .detail-content li strong {
-        color: var(--text);
-      }
-
-      /* --- Project Detail Info Boxes --- */
-      .detail-info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-        margin: 32px 0;
-      }
-      .detail-info-box {
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        border-radius: 16px;
-        padding: 24px;
-        transition:
-          border-color 0.3s ease,
-          transform 0.3s ease;
-      }
-      .detail-info-box:hover {
-        border-color: var(--text);
-        transform: translateY(-2px);
-      }
-      .detail-info-box h4 {
-        font-family: "Inter", sans-serif;
-        color: var(--text);
-        font-size: 1.25rem;
-        margin: 0 0 12px 0;
-        font-weight: 600;
-      }
-      .detail-info-box p {
-        font-family: "Inter", sans-serif;
-        margin: 0;
-        font-size: 1.05rem;
-        line-height: 1.6;
-        color: var(--text);
-        opacity: 0.75;
-      }
-
-      /* --- Sidebar Widgets --- */
-      .sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-      .widget {
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-        border-radius: 16px;
-        padding: 24px;
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-      }
-      .widget-title {
-        font-family: "Inter", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 0;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text);
-      }
-      .widget-title svg {
-        width: 20px;
-        height: 20px;
-        fill: var(--text);
-      }
-      .trending-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .trending-item {
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-      }
-      .trending-number {
-        background: var(--bg);
-        color: var(--text);
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        flex-shrink: 0;
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-      }
-      .trending-content h4 {
-        font-family: "Inter", sans-serif;
-        margin: 0 0 6px 0;
-        font-size: 0.95rem;
-        line-height: 1.4;
-        color: var(--text);
-        cursor: pointer;
-        transition: color 0.2s ease;
-      }
-      .trending-content h4:hover {
-        color: var(--text);
-        opacity: 0.8;
-      }
-
-      /* --- Popular Tags Widget --- */
-      .popular-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      .popular-tags .tag {
-        cursor: pointer;
-        transition:
-          border-color 0.2s ease,
-          color 0.2s ease;
-        padding: 10px 18px;
-        font-size: 0.9rem;
-      }
-      .popular-tags .tag:hover {
-        border-color: var(--text);
-        color: var(--text);
-        opacity: 1;
-      }
-
-      /* --- CTA Section --- */
-      .cta-section {
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-        border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
-        border-radius: 16px;
-        padding: 60px 20px;
-        text-align: center;
-        margin: 60px auto 100px;
-        max-width: 1000px;
-        color: var(--text);
-      }
-      .cta-section h2 {
-        font-family: "Inter", sans-serif;
-        font-size: 2.5rem;
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        margin-bottom: 16px;
-        color: var(--text);
-      }
-      .cta-section p {
-        font-family: "Inter", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        opacity: 0.8;
-        margin-bottom: 32px;
-        color: var(--text);
-      }
-      .cta-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-      }
-      .btn-solid,
-      .btn-outline {
-        padding: 14px 28px;
-        border-radius: 50px;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-      }
-      .btn-solid {
-        background: var(--text);
-        color: var(--bg);
-        border: 2px solid var(--text);
-      }
-      .btn-solid:hover {
-        background: transparent;
-        color: var(--text);
-        border-color: var(--text);
-      }
-      .btn-outline {
-        background: transparent;
-        color: var(--text);
-        border: 2px solid var(--border, rgba(128, 128, 128, 0.1));
-      }
-      .btn-outline:hover {
-        border-color: var(--text);
-        background: var(--card-bg, rgba(128, 128, 128, 0.05));
-      }
-
-      @media (max-width: 968px) {
-        .blog-container {
-          grid-template-columns: 1fr;
-        }
-        .sidebar {
-          grid-row: 1;
-        }
-        .detail-title {
-          font-size: 2.2rem;
-        }
-      }
-    </style>
   </head>
 
   <body>
+    <!-- SVG Symbols -->
     <svg style="display: none">
-      <symbol id="icon-mail" viewBox="0 0 24 24">
-        <path
-          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-        />
-      </symbol>
-      <symbol id="icon-instagram" viewBox="0 0 24 24">
-        <path
-          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-        />
-      </symbol>
-      <symbol id="icon-location" viewBox="0 0 24 24">
-        <path
-          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-        />
-      </symbol>
-      <symbol id="icon-search" viewBox="0 0 24 24">
-        <path
-          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-        />
-      </symbol>
-      <symbol id="icon-trending" viewBox="0 0 24 24">
-        <path
-          d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"
-        />
-      </symbol>
-      <symbol id="icon-tag" viewBox="0 0 24 24">
-        <path
-          d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"
-        />
-      </symbol>
-      <symbol id="icon-display" viewBox="0 0 24 24">
-        <path
-          d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"
-        />
-      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+      <symbol id="icon-trending" viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></symbol>
+      <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></symbol>
+      <symbol id="icon-display" viewBox="0 0 24 24"><path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/></symbol>
     </svg>
 
+    <!-- Navigation -->
     <nav>
       <a href="index.html" class="nav-logo">
-        <img
-          src="assets/knootix-logo.png"
-          alt="Knootix"
-          class="site-logo site-logo--light"
-        />
-        <img
-          src="assets/knootix-logo-dark.png"
-          alt="Knootix"
-          class="site-logo site-logo--dark"
-        />
+        <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+        <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="about.html">About</a></li>
-        <li>
-          <a href="blogs.html" style="color: var(--accent); font-weight: 700"
-            >Blogs</a
-          >
-        </li>
+        <li><a href="blogs.html" class="active">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -618,373 +52,399 @@
       </div>
     </nav>
 
-    <div
-      id="mobileMenu"
-      style="
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        background: var(--bg);
-        padding: 80px 5% 40px;
-        flex-direction: column;
-        gap: 32px;
-      "
-    >
-      <a
-        href="index.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Home</a
-      >
-      <a
-        href="services.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Services</a
-      >
-      <a
-        href="portfolio.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Work</a
-      >
-      <a
-        href="reviews.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Reviews</a
-      >
-      <a
-        href="about.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >About</a
-      >
-      <a
-        href="blogs.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Blogs</a
-      >
-      <a
-        href="contact.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Contact</a
-      >
-      <button
-        onclick="closeMobileMenu()"
-        style="
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background: none;
-          border: none;
-          font-size: 1.8rem;
-          color: var(--text);
-          cursor: pointer;
-        "
-      >
-        ✕
-      </button>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="services.html" onclick="closeMobileMenu()">Services</a>
+      <a href="work.html" onclick="closeMobileMenu()">Work</a>
+      <a href="reviews.html" onclick="closeMobileMenu()">Reviews</a>
+      <a href="about.html" onclick="closeMobileMenu()">About</a>
+      <a href="blogs.html" class="active" onclick="closeMobileMenu()">Blogs</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+      <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
     </div>
 
     <main>
       <div id="main-view">
-        <section class="blog-header">
-          <h1>Insights & <span class="accent-text">Updates</span></h1>
-          <p>Tips, stories, and updates from our team of digital innovators.</p>
-          <div class="search-container">
-            <svg class="search-icon" viewBox="0 0 24 24">
-              <use href="#icon-search"></use>
-            </svg>
-            <input
-              type="text"
-              id="searchInput"
-              class="search-input"
-              placeholder="Search Knootix services or topics..."
-              autocomplete="off"
-            />
-            <div id="searchDropdown" class="search-dropdown"></div>
+        <section class="page-hero section-padding section-darker">
+          <div class="hero-glow"></div>
+          <div class="container reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="section-label">Our Blog</div>
+            <h1 class="page-title">Insights & <span class="accent">Updates</span></h1>
+            <p class="section-desc" style="margin-bottom: 40px;">Tips, stories, and updates from our team of digital innovators.</p>
+            <div class="search-container" style="position: relative; max-width: 600px; margin: 0 auto;">
+              <svg class="search-icon" viewBox="0 0 24 24" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; fill: currentColor; opacity: 0.8; z-index: 10;">
+                <use href="#icon-search"></use>
+              </svg>
+              <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search Knootix services or topics..."
+                autocomplete="off"
+                style="width: 100%; padding: 16px 24px 16px 48px; border-radius: 50px; border: 1px solid var(--border, rgba(128,128,128,0.1)); background-color: var(--card-bg); color: var(--text); font-size: 1rem; transition: border-color 0.3s ease; outline: none; position: relative; z-index: 5;"
+              />
+              <div id="searchDropdown" class="search-dropdown" style="position: absolute; top: calc(100% + 10px); left: 0; width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 50; display: none; max-height: 350px; overflow-y: auto; text-align: left;"></div>
+            </div>
           </div>
         </section>
 
-        <section class="blog-container">
-          <div class="main-content">
-            <h2 class="section-title">
-              Featured <span class="accent-text">Work</span>
-            </h2>
-            <div class="blog-grid">
-              <article class="blog-card" onclick="openProject('project1')">
-                <div class="card-image-placeholder">
-                  <svg viewBox="0 0 24 24">
-                    <use href="#icon-display"></use>
-                  </svg>
-                </div>
-                <div class="card-meta-top">
-                  <div class="card-author">
-                    <span>Knootix Team</span>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  Why Professional UI/UX Design Is a Game-Changer
-                </h3>
-                <p class="card-excerpt">
-                  Learn how professional UI/UX design improves conversion rates
-                  and user retention for small businesses in 2026.
-                </p>
-                <div class="card-tags">
-                  <span class="tag">UI/UX Design</span>
-                  <span class="tag">Strategy</span>
-                </div>
-                <span class="read-more"
-                  >View Project <span style="font-size: 1.2rem">›</span></span
-                >
-              </article>
+        <section class="section-padding">
+          <div class="container" style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+            <style>
+              @media (min-width: 968px) {
+                .blog-layout {
+                  display: grid;
+                  grid-template-columns: 1fr 320px;
+                  gap: 40px;
+                }
+              }
+              .blog-card {
+                background: var(--card-bg, rgba(128, 128, 128, 0.05));
+                border-radius: 16px;
+                padding: 24px;
+                border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
+                transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+              }
+              .blog-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--text);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              }
+              .card-image-placeholder {
+                width: 100%;
+                height: 180px;
+                border-radius: 12px;
+                background: var(--bg);
+                margin-bottom: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .card-meta-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 16px;
+                font-size: 0.9rem;
+                color: var(--text);
+                opacity: 0.8;
+              }
+              .card-title {
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin: 0 0 12px 0;
+                line-height: 1.4;
+                color: var(--text);
+              }
+              .card-excerpt {
+                color: var(--text);
+                opacity: 0.75;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin-bottom: 24px;
+                flex-grow: 1;
+              }
+              .card-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-bottom: 24px;
+              }
+              .tag {
+                padding: 4px 12px;
+                border-radius: 50px;
+                border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--text);
+                background: transparent;
+                cursor: pointer;
+                transition: color 0.3s ease, border-color 0.3s ease;
+              }
+              .tag:hover {
+                color: var(--text);
+                border-color: var(--text);
+              }
+              .read-more {
+                color: var(--text);
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: auto;
+              }
+              .sidebar-widget {
+                background: var(--card-bg, rgba(128, 128, 128, 0.05));
+                border-radius: 16px;
+                padding: 24px;
+                border: 1px solid var(--border, rgba(128, 128, 128, 0.1));
+                margin-bottom: 40px;
+              }
+              .widget-title {
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-top: 0;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: var(--text);
+              }
+              .search-result-item {
+                padding: 16px 24px;
+                border-bottom: 1px solid var(--border, rgba(128, 128, 128, 0.1));
+                cursor: pointer;
+                transition: background 0.2s ease;
+              }
+              .search-result-item:hover {
+                background: var(--card-bg, rgba(128, 128, 128, 0.05));
+              }
+              .search-result-title {
+                color: var(--text);
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin: 0 0 4px 0;
+              }
+              .search-result-desc {
+                color: var(--text);
+                opacity: 0.75;
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin: 0;
+              }
+            </style>
 
-              <article class="blog-card" onclick="openProject('project2')">
-                <div class="card-image-placeholder">
-                  <svg viewBox="0 0 24 24">
-                    <use href="#icon-display"></use>
-                  </svg>
-                </div>
-                <div class="card-meta-top">
-                  <div class="card-author">
-                    <span>Knootix Team</span>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  Professional Video Editing Tips for Brands
-                </h3>
-                <p class="card-excerpt">
-                  Essential storytelling, pacing, and color grading tips to make
-                  your brand's video content stand out.
-                </p>
-                <div class="card-tags">
-                  <span class="tag">Video Editing</span>
-                  <span class="tag">Branding</span>
-                </div>
-                <span class="read-more"
-                  >View Project <span style="font-size: 1.2rem">›</span></span
-                >
-              </article>
+            <div class="blog-layout">
+              <div class="main-content">
+                <h2 class="section-title reveal" style="margin-bottom: 30px;">
+                  Featured <span class="accent">Work</span>
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+                  <article class="blog-card reveal" onclick="alert('Full article coming soon!')">
+                    <div class="card-image-placeholder">
+                      <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: currentColor; opacity: 0.8;">
+                        <use href="#icon-display"></use>
+                      </svg>
+                    </div>
+                    <div class="card-meta-top">
+                      <div class="card-author" style="font-weight: 500;">
+                        <span>Knootix Team</span>
+                      </div>
+                    </div>
+                    <h3 class="card-title">
+                      Why Professional UI/UX Design Is a Game-Changer
+                    </h3>
+                    <p class="card-excerpt">
+                      Learn how professional UI/UX design improves conversion rates
+                      and user retention for small businesses in 2026.
+                    </p>
+                    <div class="card-tags">
+                      <span class="tag">UI/UX Design</span>
+                      <span class="tag">Strategy</span>
+                    </div>
+                    <span class="read-more">Read Article <span style="font-size: 1.2rem">›</span></span>
+                  </article>
 
-              <article class="blog-card" onclick="openProject('project3')">
-                <div class="card-image-placeholder">
-                  <svg viewBox="0 0 24 24">
-                    <use href="#icon-display"></use>
-                  </svg>
-                </div>
-                <div class="card-meta-top">
-                  <div class="card-author">
-                    <span>Knootix Team</span>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  How Website Development Helps Your Business Grow
-                </h3>
-                <p class="card-excerpt">
-                  Discover why professional web development is essential for
-                  outperforming competitors and securing leads.
-                </p>
-                <div class="card-tags">
-                  <span class="tag">Web Development</span>
-                  <span class="tag">Growth</span>
-                </div>
-                <span class="read-more"
-                  >View Project <span style="font-size: 1.2rem">›</span></span
-                >
-              </article>
+                  <article class="blog-card reveal stagger-1" onclick="alert('Full article coming soon!')">
+                    <div class="card-image-placeholder">
+                      <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: currentColor; opacity: 0.8;">
+                        <use href="#icon-display"></use>
+                      </svg>
+                    </div>
+                    <div class="card-meta-top">
+                      <div class="card-author" style="font-weight: 500;">
+                        <span>Knootix Team</span>
+                      </div>
+                    </div>
+                    <h3 class="card-title">
+                      Professional Video Editing Tips for Brands
+                    </h3>
+                    <p class="card-excerpt">
+                      Essential storytelling, pacing, and color grading tips to make
+                      your brand's video content stand out.
+                    </p>
+                    <div class="card-tags">
+                      <span class="tag">Video Editing</span>
+                      <span class="tag">Branding</span>
+                    </div>
+                    <span class="read-more">Read Article <span style="font-size: 1.2rem">›</span></span>
+                  </article>
 
-              <article class="blog-card" onclick="openProject('project4')">
-                <div class="card-image-placeholder">
-                  <svg viewBox="0 0 24 24">
-                    <use href="#icon-display"></use>
-                  </svg>
+                  <article class="blog-card reveal stagger-2" onclick="alert('Full article coming soon!')">
+                    <div class="card-image-placeholder">
+                      <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: currentColor; opacity: 0.8;">
+                        <use href="#icon-display"></use>
+                      </svg>
+                    </div>
+                    <div class="card-meta-top">
+                      <div class="card-author" style="font-weight: 500;">
+                        <span>Knootix Team</span>
+                      </div>
+                    </div>
+                    <h3 class="card-title">
+                      How Website Development Helps Your Business Grow
+                    </h3>
+                    <p class="card-excerpt">
+                      Discover why professional web development is essential for
+                      outperforming competitors and securing leads.
+                    </p>
+                    <div class="card-tags">
+                      <span class="tag">Web Development</span>
+                      <span class="tag">Growth</span>
+                    </div>
+                    <span class="read-more">Read Article <span style="font-size: 1.2rem">›</span></span>
+                  </article>
+
+                  <article class="blog-card reveal stagger-3" onclick="alert('Full article coming soon!')">
+                    <div class="card-image-placeholder">
+                      <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; fill: currentColor; opacity: 0.8;">
+                        <use href="#icon-display"></use>
+                      </svg>
+                    </div>
+                    <div class="card-meta-top">
+                      <div class="card-author" style="font-weight: 500;">
+                        <span>Knootix Team</span>
+                      </div>
+                    </div>
+                    <h3 class="card-title">Graphic Designing</h3>
+                    <p class="card-excerpt">
+                      Knootix creates professional visual identities that help
+                      businesses build a strong brand presence.
+                    </p>
+                    <div class="card-tags">
+                      <span class="tag">Brand Visuals</span>
+                      <span class="tag">Creative Design</span>
+                    </div>
+                    <span class="read-more">Read Article <span style="font-size: 1.2rem">›</span></span>
+                  </article>
                 </div>
-                <div class="card-meta-top">
-                  <div class="card-author">
-                    <span>Knootix Team</span>
+              </div>
+
+              <aside class="sidebar">
+                <div class="sidebar-widget reveal">
+                  <h3 class="widget-title">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><use href="#icon-trending"></use></svg>
+                    Trending Services
+                  </h3>
+                  <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px;">
+                    <li style="display: flex; gap: 16px; align-items: center;">
+                      <div style="background: var(--bg); color: var(--text); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; border: 1px solid var(--border);">1</div>
+                      <div style="font-weight: 600; cursor: pointer;">Custom Web Development</div>
+                    </li>
+                    <li style="display: flex; gap: 16px; align-items: center;">
+                      <div style="background: var(--bg); color: var(--text); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; border: 1px solid var(--border);">2</div>
+                      <div style="font-weight: 600; cursor: pointer;">Brand Identity & UI/UX</div>
+                    </li>
+                    <li style="display: flex; gap: 16px; align-items: center;">
+                      <div style="background: var(--bg); color: var(--text); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 600; flex-shrink: 0; border: 1px solid var(--border);">3</div>
+                      <div style="font-weight: 600; cursor: pointer;">Professional Video Editing</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="sidebar-widget reveal stagger-1">
+                  <h3 class="widget-title">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><use href="#icon-tag"></use></svg>
+                    Popular Tags
+                  </h3>
+                  <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <span class="tag">Responsive Design</span>
+                    <span class="tag">Custom Website</span>
+                    <span class="tag">Prototyping</span>
+                    <span class="tag">Wireframing</span>
+                    <span class="tag">Visual Branding</span>
+                    <span class="tag">Marketing Graphics</span>
+                    <span class="tag">Motion Graphics</span>
                   </div>
                 </div>
-                <h3 class="card-title">Graphic Designing</h3>
-                <p class="card-excerpt">
-                  Knootix creates professional visual identities that help
-                  businesses build a strong brand presence.
-                </p>
-                <div class="card-tags">
-                  <span class="tag">Brand Visuals</span>
-                  <span class="tag">Creative Design</span>
-                </div>
-                <span class="read-more"
-                  >View Project <span style="font-size: 1.2rem">›</span></span
-                >
-              </article>
+              </aside>
             </div>
           </div>
+        </section>
 
-          <aside class="sidebar">
-            <div class="widget">
-              <h3 class="widget-title">
-                <svg viewBox="0 0 24 24"><use href="#icon-trending"></use></svg>
-                Trending Services
-              </h3>
-              <ul class="trending-list">
-                <li class="trending-item">
-                  <div class="trending-number">1</div>
-                  <div class="trending-content">
-                    <h4>Custom Web Development</h4>
-                  </div>
-                </li>
-                <li class="trending-item">
-                  <div class="trending-number">2</div>
-                  <div class="trending-content">
-                    <h4>Brand Identity & UI/UX</h4>
-                  </div>
-                </li>
-                <li class="trending-item">
-                  <div class="trending-number">3</div>
-                  <div class="trending-content">
-                    <h4>Professional Video Editing</h4>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="widget">
-              <h3 class="widget-title">
-                <svg viewBox="0 0 24 24"><use href="#icon-tag"></use></svg>
-                Popular Tags
-              </h3>
-              <div class="popular-tags">
-                <span class="tag">Responsive Design</span>
-                <span class="tag">Custom Website</span>
-                <span class="tag">Prototyping</span>
-                <span class="tag">Wireframing</span>
-                <span class="tag">Visual Branding</span>
-                <span class="tag">Marketing Graphics</span>
-                <span class="tag">Motion Graphics</span>
+        <section class="section-padding">
+          <div class="container reveal">
+            <div style="background: var(--card-bg, rgba(128,128,128,0.05)); border: 1px solid var(--border, rgba(128,128,128,0.1)); border-radius: 20px; padding: 60px 20px; text-align: center; max-width: 1000px; margin: 0 auto;">
+              <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px;">Want to see how Knootix can help your business grow?</h2>
+              <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Let's discuss your project and explore how our digital solutions can
+                drive your success.
+              </p>
+              <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="contact.html" class="btn-primary">Contact Us</a>
+                <a href="work.html" class="btn-ghost">View Portfolio</a>
               </div>
             </div>
-          </aside>
-        </section>
-
-        <section class="cta-section">
-          <h2>Want to see how Knootix can help your business grow?</h2>
-          <p>
-            Let's discuss your project and explore how our digital solutions can
-            drive your success.
-          </p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn-solid">Contact Us</a>
-            <a href="services.html" class="btn-outline">View Services</a>
           </div>
         </section>
       </div>
 
-      <div id="project-detail">
-        <button class="back-btn" onclick="closeProject()">
+      <div id="project-detail" style="display: none; max-width: 800px; margin: 0 auto; padding: 60px 20px 100px;">
+        <button onclick="closeProject()" style="display: inline-flex; align-items: center; gap: 8px; background: var(--card-bg); border: 1px solid var(--border); color: var(--text); font-size: 0.95rem; font-weight: 600; cursor: pointer; padding: 10px 20px; border-radius: 50px; margin-top: 20px; margin-bottom: 40px; transition: all 0.3s ease;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
-            />
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
           </svg>
-          Back to Work
+          Back to Blogs
         </button>
-        <div class="detail-meta">
-          <div class="card-author">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--border);">
+          <div style="font-weight: 500;">
             <span>Knootix Team</span>
           </div>
         </div>
-        <h1 class="detail-title" id="detailTitle">Project Title</h1>
-        <div
-          class="card-image-placeholder"
-          style="height: 350px; margin-bottom: 40px"
-        >
-          <svg viewBox="0 0 24 24" style="width: 80px; height: 80px">
+        <h1 id="detailTitle" style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;">Project Title</h1>
+        <div class="card-image-placeholder" style="height: 350px; margin-bottom: 40px;">
+          <svg viewBox="0 0 24 24" style="width: 80px; height: 80px; fill: currentColor; opacity: 0.8;">
             <use href="#icon-display"></use>
           </svg>
         </div>
-        <div class="detail-content" id="detailContent"></div>
+        <div id="detailContent" style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;"></div>
       </div>
     </main>
 
+    <!-- ============ FOOTER ============ -->
     <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h3>Stay in the loop</h3>
+          <p>Get design insights, project showcases, and industry trends delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
-          <img
-            src="assets/knootix-logo.png"
-            alt="Knootix"
-            class="site-logo site-logo--light"
-          />
-          <img
-            src="assets/knootix-logo-dark.png"
-            alt="Knootix"
-            class="site-logo site-logo--dark"
-          />
-          <p>
-            Bold creative work for brands that refuse to be ordinary. Based in
-            Lahore, working worldwide.
-          </p>
+          <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+          <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+          <p>Bold creative work for brands that refuse to be ordinary. Based in Lahore, working worldwide.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html">Video Editing</a></li>
-            <li><a href="services.html">Graphic Design</a></li>
-            <li><a href="services.html">Web Development</a></li>
-            <li><a href="services.html">Photography</a></li>
+            <li><a href="service-video-editing.html">Video Editing</a></li>
+            <li><a href="service-graphic-design.html">Graphic Design</a></li>
+            <li><a href="service-web-development.html">Web Development</a></li>
+            <li><a href="service-photography.html">Photography</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="portfolio.html">Our Work</a></li>
+            <li><a href="work.html">Our Work</a></li>
             <li><a href="reviews.html">Testimonials</a></li>
+            <li><a href="blogs.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -992,47 +452,42 @@
           <h4>Connect</h4>
           <ul>
             <li><a href="mailto:knootix@gmail.com">Email Us</a></li>
-            <li>
-              <a href="https://instagram.com/knootix" target="_blank"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/923414680668?text=Hello%20Knootix!"
-                target="_blank"
-                >WhatsApp</a
-              >
-            </li>
+            <li><a href="https://instagram.com/knootix" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank">WhatsApp</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>
-          © 2026 <span class="accent">Knootix</span>. All rights reserved.
-          Crafted with precision in Lahore 🇵🇰
-        </p>
+        <p>© 2026 <span class="accent">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
         <div class="social-links">
-          <a
-            href="https://instagram.com/knootix"
-            target="_blank"
-            class="social-link"
-          >
+          <a href="https://instagram.com/knootix" target="_blank" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
+          <a href="mailto:knootix@gmail.com" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-mail"></use></svg></a>
+          <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="social-link">
             <svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-instagram"></use>
-            </svg>
-          </a>
-          <a href="mailto:knootix@gmail.com" class="social-link">
-            <svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-mail"></use>
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
           </a>
         </div>
       </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+      <div class="wa-pulse"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+
     <script>
-      // 1. Target the Input and Dropdown containers
+      // Search Functionality
       const searchInput = document.getElementById("searchInput");
       const searchDropdown = document.getElementById("searchDropdown");
 
@@ -1056,63 +511,61 @@
           id: "project4",
           title: "Graphic Designing",
           desc: "Knootix creates professional visual identities that help businesses build a strong brand presence.",
-        },
+        }
       ];
 
-      searchInput.addEventListener("input", function () {
-        const query = this.value.toLowerCase().trim();
-        searchDropdown.innerHTML = ""; // Clear previous results
+      if(searchInput && searchDropdown) {
+        searchInput.addEventListener("input", function () {
+          const query = this.value.toLowerCase().trim();
+          searchDropdown.innerHTML = "";
 
-        if (query.length === 0) {
-          searchDropdown.style.display = "none";
-          return;
-        }
+          if (query.length === 0) {
+            searchDropdown.style.display = "none";
+            return;
+          }
 
-        const results = searchData.filter(
-          (item) =>
-            item.title.toLowerCase().includes(query) ||
-            item.desc.toLowerCase().includes(query),
-        );
+          const results = searchData.filter(
+            (item) =>
+              item.title.toLowerCase().includes(query) ||
+              item.desc.toLowerCase().includes(query)
+          );
 
-        if (results.length > 0) {
-          results.forEach((item) => {
-            const div = document.createElement("div");
-            div.className = "search-result-item";
-            div.innerHTML = `
-              <h4 class="search-result-title">${item.title}</h4>
-              <p class="search-result-desc">${item.desc}</p>
+          if (results.length > 0) {
+            results.forEach((item) => {
+              const div = document.createElement("div");
+              div.className = "search-result-item";
+              div.innerHTML = `
+                <h4 class="search-result-title">${item.title}</h4>
+                <p class="search-result-desc">${item.desc}</p>
+              `;
+
+              div.onclick = () => {
+                searchInput.value = item.title;
+                searchDropdown.style.display = "none";
+                if (typeof openProject === "function") {
+                  openProject(item.id);
+                }
+              };
+              searchDropdown.appendChild(div);
+            });
+          } else {
+            searchDropdown.innerHTML = `
+              <div class="search-result-item" style="cursor: default; background: transparent;">
+                <p class="search-result-desc">No matching services found.</p>
+              </div>
             `;
+          }
 
-            div.onclick = () => {
-              searchInput.value = item.title;
-              searchDropdown.style.display = "none";
+          searchDropdown.style.display = "block";
+        });
 
-              if (typeof openProject === "function") {
-                openProject(item.id);
-              }
-            };
-
-            searchDropdown.appendChild(div);
-          });
-        } else {
-          searchDropdown.innerHTML = `
-            <div class="search-result-item" style="cursor: default; background: transparent;">
-              <p class="search-result-desc">No matching services found.</p>
-            </div>
-          `;
-        }
-
-        searchDropdown.style.display = "block";
-      });
-
-      document.addEventListener("click", function (e) {
-        if (
-          !searchInput.contains(e.target) &&
-          !searchDropdown.contains(e.target)
-        ) {
-          searchDropdown.style.display = "none";
-        }
-      });
+        document.addEventListener("click", function (e) {
+          if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+            searchDropdown.style.display = "none";
+          }
+        });
+      }
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -6,50 +6,31 @@
     <title>About Us | Knootix — Creative Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- SVG Symbols -->
     <svg style="display: none">
-      <symbol id="icon-mail" viewBox="0 0 24 24">
-        <path
-          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-        />
-      </symbol>
-      <symbol id="icon-instagram" viewBox="0 0 24 24">
-        <path
-          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-        />
-      </symbol>
-      <symbol id="icon-location" viewBox="0 0 24 24">
-        <path
-          d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-        />
-      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
+      <symbol id="icon-location" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></symbol>
     </svg>
 
+    <!-- Navigation -->
     <nav>
       <a href="index.html" class="nav-logo">
-        <img
-          src="assets/knootix-logo.png"
-          alt="Knootix"
-          class="site-logo site-logo--light"
-        />
-        <img
-          src="assets/knootix-logo-dark.png"
-          alt="Knootix"
-          class="site-logo site-logo--dark"
-        />
+        <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+        <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="work.html">Work</a></li>
         <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="blogs.html">Blogs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -65,403 +46,124 @@
       </div>
     </nav>
 
-    <div
-      id="mobileMenu"
-      style="
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 999;
-        background: var(--bg);
-        padding: 80px 5% 40px;
-        flex-direction: column;
-        gap: 32px;
-      "
-    >
-      <a
-        href="index.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Home</a
-      >
-      <a
-        href="services.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Services</a
-      >
-      <a
-        href="work.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Work</a
-      >
-      <a
-        href="reviews.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Reviews</a
-      >
-      <a
-        href="about.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >About</a
-      >
-      <a
-        href="blogs.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Blogs</a
-      >
-      <a
-        href="contact.html"
-        onclick="closeMobileMenu()"
-        style="
-          font-family: &quot;Inter&quot;, sans-serif;
-          font-size: 1.8rem;
-          font-weight: 700;
-          color: var(--text);
-          text-decoration: none;
-        "
-        >Contact</a
-      >
-      <button
-        onclick="closeMobileMenu()"
-        style="
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          background: none;
-          border: none;
-          font-size: 1.8rem;
-          color: var(--text);
-          cursor: pointer;
-        "
-      >
-        ✕
-      </button>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="services.html" onclick="closeMobileMenu()">Services</a>
+      <a href="work.html" onclick="closeMobileMenu()">Work</a>
+      <a href="reviews.html" onclick="closeMobileMenu()">Reviews</a>
+      <a href="about.html" class="active" onclick="closeMobileMenu()">About</a>
+      <a href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+      <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
     </div>
 
-    <section id="about" style="padding-top: 150px; min-height: 100vh">
-      <div class="about-grid">
+    <!-- Service page hero style header -->
+    <section id="about" class="page-hero section-darker section-padding">
+      <div class="hero-glow"></div>
+      <div class="about-grid container">
         <div class="about-text reveal">
           <div class="section-label">About Us</div>
-          <h2 class="section-title">Crafted with<br />Purpose</h2>
-          <p>
+          <h1 class="page-title">Crafted with<br /><span class="accent">Purpose</span></h1>
+          <p class="section-desc" style="margin-bottom: 24px;">
             Knootix is a full-service creative studio based in Lahore, Pakistan.
             We work at the intersection of bold design, compelling video, and
             clean technology to help brands communicate with clarity and impact.
           </p>
-          <p>
+          <p class="section-desc" style="margin-bottom: 24px;">
             Whether you're a local startup building your identity from scratch
             or an established international business looking for a creative
             refresh — we bring the same level of precision, passion, and
             professionalism to every project.
           </p>
-          <p>
+          <p class="section-desc" style="margin-bottom: 40px;">
             We don't just deliver files. We build long-term creative
             partnerships that drive real growth.
           </p>
-          <div class="about-contact">
-            <a href="mailto:knootix@gmail.com" class="contact-item">
-              <span class="contact-icon">
-                <svg class="svg-icon" viewBox="0 0 24 24">
+          <div class="about-contact" style="display: flex; gap: 24px; flex-wrap: wrap;">
+            <a href="mailto:knootix@gmail.com" class="contact-item" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+              <span class="contact-icon" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; color: var(--text);">
+                <svg class="svg-icon" viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;">
                   <use href="#icon-mail"></use>
                 </svg>
               </span>
               <div>
-                <div class="contact-label">Email Us</div>
-                <div class="contact-value">knootix@gmail.com</div>
+                <div class="contact-label" style="font-size: 0.85rem; opacity: 0.7; color: var(--text);">Email Us</div>
+                <div class="contact-value" style="font-weight: 600; color: var(--text);">knootix@gmail.com</div>
               </div>
             </a>
-            <a
-              href="https://instagram.com/knootix"
-              target="_blank"
-              class="contact-item"
-            >
-              <span class="contact-icon">
-                <svg class="svg-icon" viewBox="0 0 24 24">
+            <a href="https://instagram.com/knootix" target="_blank" class="contact-item" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+              <span class="contact-icon" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(255,255,255,0.05); border-radius: 50%; color: var(--text);">
+                <svg class="svg-icon" viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;">
                   <use href="#icon-instagram"></use>
                 </svg>
               </span>
               <div>
-                <div class="contact-label">Follow on Instagram</div>
-                <div class="contact-value">@knootix</div>
+                <div class="contact-label" style="font-size: 0.85rem; opacity: 0.7; color: var(--text);">Follow on Instagram</div>
+                <div class="contact-value" style="font-weight: 600; color: var(--text);">@knootix</div>
               </div>
             </a>
           </div>
         </div>
         <div class="about-visual reveal">
-          <div class="about-img-container">
-            <img
-              src="assets/knootix-logo.png"
-              alt="Knootix"
-              class="site-logo site-logo--light"
-            />
-            <img
-              src="assets/knootix-logo-dark.png"
-              alt="Knootix"
-              class="site-logo site-logo--dark"
-            />
+          <div class="about-img-container" style="position: relative; border-radius: 24px; background: var(--card-bg, rgba(255,255,255,0.02)); border: 1px solid var(--border, rgba(255,255,255,0.1)); padding: 60px; display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1;">
+            <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" style="max-width: 200px;" />
+            <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" style="max-width: 200px;" />
           </div>
-          <div class="about-badge">
-            <div class="about-badge-num">10+</div>
-            <div class="about-badge-text">Years Creative<br />Excellence</div>
+          <div class="about-badge" style="position: absolute; bottom: 30px; right: 30px; background: var(--bg); border: 1px solid var(--border); padding: 20px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <div class="about-badge-num" style="font-size: 2.5rem; font-weight: 800; color: var(--text); line-height: 1;">10+</div>
+            <div class="about-badge-text" style="font-size: 0.9rem; font-weight: 500; color: var(--text); opacity: 0.8; margin-top: 8px;">Years Creative<br />Excellence</div>
           </div>
         </div>
       </div>
     </section>
 
-    <style>
-      .process-section {
-        padding: 80px 5% 120px;
-        max-width: 1400px;
-        margin: 0 auto;
-        font-family: "Inter", sans-serif;
-      }
-      .process-section-title {
-        text-align: center;
-        font-size: 2.8rem;
-        font-weight: 800;
-        margin-bottom: 60px;
-        color: var(--text, #ffffff);
-        letter-spacing: -0.5px;
-      }
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-        position: relative;
-      }
-      .process-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--accent, #22c55e);
-        border-radius: 16px;
-        padding: 40px 32px;
-        text-align: left;
-        position: relative;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .process-card:hover {
-        border-color: var(--accent, #22c55e);
-        background: rgba(255, 255, 255, 0.04);
-        transform: translateY(-6px);
-        box-shadow: 0 16px 40px rgba(34, 197, 94, 0.15);
-      }
-      .process-step {
-        background: rgba(34, 197, 94, 0.05);
-        color: var(--accent, #22c55e);
-        border: 1px solid var(--accent, #22c55e);
-        padding: 6px 16px;
-        border-radius: 30px;
-        font-weight: 600;
-        font-size: 0.8rem;
-        margin-bottom: 32px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-      }
-      .process-icon {
-        color: var(--accent, #22c55e);
-        margin-bottom: 24px;
-        display: flex;
-        opacity: 0.9;
-        transition: transform 0.4s ease;
-      }
-      .process-card:hover .process-icon {
-        transform: scale(1.05);
-      }
-      .process-title {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-        line-height: 1.4;
-        color: var(--text, #ffffff);
-      }
-      .process-desc {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        opacity: 0.7;
-        color: var(--text, #e0e0e0);
-        margin: 0;
-      }
-      .process-arrow {
-        position: absolute;
-        top: 50%;
-        right: -18px;
-        transform: translateY(-50%);
-        color: var(--accent, #22c55e);
-        opacity: 0.3;
-        font-size: 24px;
-        z-index: 2;
-        transition:
-          opacity 0.4s ease,
-          color 0.4s ease;
-      }
-      .process-card:hover .process-arrow {
-        opacity: 0.8;
-        color: var(--accent, #22c55e);
-      }
-      @media (max-width: 1024px) {
-        .process-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 32px 24px;
-        }
-        .process-arrow {
-          display: none;
-        }
-      }
-      @media (max-width: 600px) {
-        .process-grid {
-          grid-template-columns: 1fr;
-          gap: 24px;
-        }
-        .process-section-title {
-          font-size: 2.2rem;
-        }
-      }
-    </style>
-
-    <section class="process-section" id="process">
-      <h2 class="process-section-title reveal">OUR PROVEN PROCESS</h2>
-      <div class="process-grid">
+    <!-- Process section -->
+    <section class="process-section section-padding" id="process">
+      <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
+        <h2 class="section-title">OUR PROVEN PROCESS</h2>
+      </div>
+      <div class="process-grid container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
         <div class="process-card reveal">
           <div class="process-step">Step 1</div>
           <div class="process-icon">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              <path d="M11 8a3 3 0 0 0-3 3"></path>
-            </svg>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><path d="M11 8a3 3 0 0 0-3 3"></path></svg>
           </div>
           <h3 class="process-title">Discovery &<br />Strategy</h3>
           <p class="process-desc">
             Understanding your brand, target audience, requirements, and project
             goals.
           </p>
-          <div class="process-arrow">→</div>
         </div>
 
-        <div class="process-card reveal" style="transition-delay: 0.1s">
+        <div class="process-card reveal stagger-1">
           <div class="process-step">Step 2</div>
           <div class="process-icon">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M9 18h6"></path>
-              <path d="M10 22h4"></path>
-              <path
-                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"
-              ></path>
-            </svg>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
           </div>
           <h3 class="process-title">Creative<br />Concept</h3>
           <p class="process-desc">
             Planning ideas, creating concepts, and preparing the right creative
             direction.
           </p>
-          <div class="process-arrow">→</div>
         </div>
 
-        <div class="process-card reveal" style="transition-delay: 0.2s">
+        <div class="process-card reveal stagger-2">
           <div class="process-step">Step 3</div>
           <div class="process-icon">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-              <polyline points="16 10 18 10 18 8"></polyline>
-              <polyline points="6 10 8 10 8 8"></polyline>
-            </svg>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line><polyline points="16 10 18 10 18 8"></polyline><polyline points="6 10 8 10 8 8"></polyline></svg>
           </div>
           <h3 class="process-title">Design &<br />Development</h3>
           <p class="process-desc">
             Turning ideas into reality with modern design, clean code, and
             quality execution.
           </p>
-          <div class="process-arrow">→</div>
         </div>
 
-        <div class="process-card reveal" style="transition-delay: 0.3s">
+        <div class="process-card reveal stagger-3">
           <div class="process-step">Step 4</div>
           <div class="process-icon">
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
           <h3 class="process-title">Refinement &<br />Delivery</h3>
           <p class="process-desc">
@@ -471,31 +173,33 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ FOOTER ============ -->
     <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h3>Stay in the loop</h3>
+          <p>Get design insights, project showcases, and industry trends delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
-          <img
-            src="assets/knootix-logo.png"
-            alt="Knootix"
-            class="site-logo site-logo--light"
-          />
-          <img
-            src="assets/knootix-logo-dark.png"
-            alt="Knootix"
-            class="site-logo site-logo--dark"
-          />
-          <p>
-            Bold creative work for brands that refuse to be ordinary. Based in
-            Lahore, working worldwide.
-          </p>
+          <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+          <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+          <p>Bold creative work for brands that refuse to be ordinary. Based in Lahore, working worldwide.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html">Video Editing</a></li>
-            <li><a href="services.html">Graphic Design</a></li>
-            <li><a href="services.html">Web Development</a></li>
-            <li><a href="services.html">Photography</a></li>
+            <li><a href="service-video-editing.html">Video Editing</a></li>
+            <li><a href="service-graphic-design.html">Graphic Design</a></li>
+            <li><a href="service-web-development.html">Web Development</a></li>
+            <li><a href="service-photography.html">Photography</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -504,6 +208,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="work.html">Our Work</a></li>
             <li><a href="reviews.html">Testimonials</a></li>
+            <li><a href="blogs.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -511,76 +216,37 @@
           <h4>Connect</h4>
           <ul>
             <li><a href="mailto:knootix@gmail.com">Email Us</a></li>
-            <li>
-              <a href="https://instagram.com/knootix" target="_blank"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/923414680668?text=Hello%20Knootix!"
-                target="_blank"
-                >WhatsApp</a
-              >
-            </li>
+            <li><a href="https://instagram.com/knootix" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank">WhatsApp</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>
-          © 2026 <span class="accent">Knootix</span>. All rights reserved.
-          Crafted with precision in Lahore 🇵🇰
-        </p>
+        <p>© 2026 <span class="accent">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
         <div class="social-links">
-          <a
-            href="https://instagram.com/knootix"
-            target="_blank"
-            class="social-link"
-            ><svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-instagram"></use></svg
-          ></a>
-          <a href="mailto:knootix@gmail.com" class="social-link"
-            ><svg class="svg-icon" viewBox="0 0 24 24">
-              <use href="#icon-mail"></use></svg
-          ></a>
-          <a
-            href="https://wa.me/923414680668?text=Hello%20Knootix!"
-            target="_blank"
-            class="social-link"
-          >
+          <a href="https://instagram.com/knootix" target="_blank" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
+          <a href="mailto:knootix@gmail.com" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-mail"></use></svg></a>
+          <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="social-link">
             <svg class="svg-icon" viewBox="0 0 24 24">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-              />
-              <path
-                d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-              />
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <a
-      href="https://wa.me/923414680668?text=Hello%20Knootix!"
-      target="_blank"
-      class="whatsapp-float"
-      title="Chat on WhatsApp"
-    >
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
       <div class="wa-pulse"></div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="#fff"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
-        />
-        <path
-          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
       </svg>
     </a>
 

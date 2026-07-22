@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Web Development | Knootix</title>
+    <meta name="description" content="We build blazing-fast, beautiful, and conversion-optimized websites that serve as the digital foundation of your brand." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- SVG Symbols -->
+    <svg style="display: none">
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
+    </svg>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+        <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <span class="theme-icon" id="themeIcon">☀️</span>
+          <span id="themeLabel">Light</span>
+        </button>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="services.html" onclick="closeMobileMenu()">Services</a>
+      <a href="work.html" onclick="closeMobileMenu()">Work</a>
+      <a href="reviews.html" onclick="closeMobileMenu()">Reviews</a>
+      <a href="about.html" onclick="closeMobileMenu()">About</a>
+      <a href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+      <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+    </div>
+
+    <section class="service-page-hero">
+      <div class="hero-glow"></div>
+      <div class="service-hero-content reveal">
+        <div class="service-hero-badge">Web Development</div>
+        <h1 class="hero-headline">Custom Website<br>Development</h1>
+        <p class="hero-sub">We build blazing-fast, beautiful, and conversion-optimized websites that serve as the digital foundation of your brand.</p>
+      </div>
+    </section>
+
+    <section class="svc-offerings-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">What We Offer</h2>
+      </div>
+      <div class="svc-offerings-grid">
+        <div class="svc-offering-card reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <h3>Custom Responsive Websites</h3>
+          <p>Bespoke web designs tailored to your brand identity, ensuring flawless performance across all devices and screen sizes.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <h3>E-Commerce Platforms</h3>
+          <p>Scalable, secure, and intuitive online stores built to maximize conversions and deliver seamless shopping experiences.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <h3>Landing Pages & Funnels</h3>
+          <p>High-converting landing pages strategically designed to capture leads and drive targeted campaign results.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          <h3>Web Application Development</h3>
+          <p>Robust, secure, and highly interactive web apps built to solve complex business challenges.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <h3>CMS & WordPress</h3>
+          <p>Flexible content management solutions empowering you to easily manage and scale your digital content.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+          <h3>Performance & SEO Optimization</h3>
+          <p>Lightning-fast load times and built-in technical SEO to improve your visibility and user retention.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-process-section section-darker">
+      <div class="section-header reveal">
+        <h2 class="section-title">Our Process</h2>
+      </div>
+      <div class="svc-process-timeline">
+        <div class="svc-process-step reveal">
+          <div class="step-num">01</div>
+          <h4>Requirements & Planning</h4>
+          <p>We analyze your business needs, audience, and goals to craft a strategic digital roadmap.</p>
+        </div>
+        <div class="svc-process-step reveal stagger-1">
+          <div class="step-num">02</div>
+          <h4>Wireframing & Design</h4>
+          <p>Creating intuitive user experiences and high-fidelity visual mockups before writing a single line of code.</p>
+        </div>
+        <div class="svc-process-step reveal stagger-2">
+          <div class="step-num">03</div>
+          <h4>Development & Testing</h4>
+          <p>Building your site with clean, modern tech stacks while rigorously testing for bugs and cross-browser compatibility.</p>
+        </div>
+        <div class="svc-process-step reveal stagger-3">
+          <div class="step-num">04</div>
+          <h4>Launch & Maintenance</h4>
+          <p>Deploying your flawless new website and providing ongoing support to keep it secure and up-to-date.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-portfolio-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">Recent Work</h2>
+      </div>
+      <div class="svc-portfolio-grid">
+        <div class="svc-portfolio-card reveal">
+          <img src="assets/portfolio/project-web-design.jpg" alt="Web Design Project">
+        </div>
+        <div class="svc-portfolio-card reveal stagger-1">
+          <img src="assets/portfolio/project-app-design.jpg" alt="App Design Project">
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-tech-section section-darker">
+      <div class="section-header reveal">
+        <h2 class="section-title">Technologies & Tools</h2>
+      </div>
+      <div class="svc-tech-grid">
+        <div class="svc-tech-item reveal">Next.js</div>
+        <div class="svc-tech-item reveal">React</div>
+        <div class="svc-tech-item reveal">TypeScript</div>
+        <div class="svc-tech-item reveal">Tailwind CSS</div>
+        <div class="svc-tech-item reveal">Node.js</div>
+        <div class="svc-tech-item reveal">Supabase</div>
+        <div class="svc-tech-item reveal">WordPress</div>
+        <div class="svc-tech-item reveal">Shopify</div>
+        <div class="svc-tech-item reveal">Figma</div>
+        <div class="svc-tech-item reveal">Vercel</div>
+      </div>
+    </section>
+
+    <section class="svc-advantages-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">Why Choose Knootix</h2>
+      </div>
+      <div class="svc-advantages-grid">
+        <div class="svc-advantage-card reveal">
+          <h3 class="accent">Performance-First Architecture</h3>
+          <p>We build with speed in mind, utilizing modern frameworks to ensure rapid load times and smooth interactions.</p>
+        </div>
+        <div class="svc-advantage-card reveal stagger-1">
+          <h3 class="accent">Mobile-First Design</h3>
+          <p>Every interface is crafted to look and function perfectly on mobile devices, capturing your on-the-go audience.</p>
+        </div>
+        <div class="svc-advantage-card reveal stagger-2">
+          <h3 class="accent">SEO Built-In</h3>
+          <p>Our code structures adhere to the latest technical SEO standards, giving you a competitive edge on search engines.</p>
+        </div>
+        <div class="svc-advantage-card reveal stagger-3">
+          <h3 class="accent">Ongoing Support & Maintenance</h3>
+          <p>We don't just launch and leave; we provide dedicated post-launch support to keep your site running flawlessly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-faq-section section-darker">
+      <div class="section-header reveal">
+        <h2 class="section-title">FAQs</h2>
+      </div>
+      <div class="faq-container">
+        <div class="svc-faq-item reveal" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>What tech stack do you use?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>We primarily use modern, scalable technologies like Next.js, React, and Tailwind CSS for custom solutions, alongside robust platforms like WordPress and Shopify for CMS and e-commerce needs.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-1" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Do you provide hosting?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Yes, we can deploy your website on high-performance cloud platforms like Vercel or AWS, or assist in setting up your own preferred hosting environment.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-2" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>What is the typical timeline?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>A standard custom website usually takes between 4 to 8 weeks from initial planning to final launch, depending on the complexity and feature set required.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-3" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Can I manage content myself?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Absolutely. We build user-friendly backend dashboards using headless CMS or platforms like WordPress, empowering your team to update text and images easily.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-4" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Is SEO included?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Technical on-page SEO is built into the architecture of every site we develop, including proper semantic HTML, fast loading speeds, and responsive design.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-5" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Do you offer ongoing maintenance?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Yes, we offer retainer packages for continuous support, regular updates, security monitoring, and ongoing optimization of your website.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-6" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Do you build e-commerce features?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Yes! We have extensive experience building scalable online stores using modern frameworks, Shopify, or WooCommerce, tailored to your specific product catalog.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-cta-section">
+      <div class="cta-content reveal">
+        <h2>Ready to build your digital presence?</h2>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">Book a Consultation →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h3>Stay in the loop</h3>
+          <p>Get design insights, project showcases, and industry trends delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+          <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+          <p>Bold creative work for brands that refuse to be ordinary. Based in Lahore, working worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-video-editing.html">Video Editing</a></li>
+            <li><a href="service-graphic-design.html">Graphic Design</a></li>
+            <li><a href="service-web-development.html">Web Development</a></li>
+            <li><a href="service-photography.html">Photography</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html">Our Work</a></li>
+            <li><a href="reviews.html">Testimonials</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:knootix@gmail.com">Email Us</a></li>
+            <li><a href="https://instagram.com/knootix" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <span class="accent">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com/knootix" target="_blank" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
+          <a href="mailto:knootix@gmail.com" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-mail"></use></svg></a>
+          <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="social-link">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+      <div class="wa-pulse"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

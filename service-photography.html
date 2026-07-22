@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Photography | Knootix</title>
+    <meta name="description" content="From product shots to corporate events — we capture moments with precision, creativity, and an eye for detail that brings your brand to life." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- SVG Symbols -->
+    <svg style="display: none">
+      <symbol id="icon-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></symbol>
+    </svg>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+        <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <span class="theme-icon" id="themeIcon">☀️</span>
+          <span id="themeLabel">Light</span>
+        </button>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" onclick="closeMobileMenu()">Home</a>
+      <a href="services.html" onclick="closeMobileMenu()">Services</a>
+      <a href="work.html" onclick="closeMobileMenu()">Work</a>
+      <a href="reviews.html" onclick="closeMobileMenu()">Reviews</a>
+      <a href="about.html" onclick="closeMobileMenu()">About</a>
+      <a href="blogs.html" onclick="closeMobileMenu()">Blogs</a>
+      <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+      <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+    </div>
+
+    <section class="service-page-hero">
+      <div class="hero-glow"></div>
+      <div class="service-hero-content reveal">
+        <div class="service-hero-badge">Photography</div>
+        <h1 class="hero-headline">Professional<br>Photography</h1>
+        <p class="hero-sub">From product shots to corporate events — we capture moments with precision, creativity, and an eye for detail that brings your brand to life.</p>
+      </div>
+    </section>
+
+    <section class="svc-offerings-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">What We Offer</h2>
+      </div>
+      <div class="svc-offerings-grid">
+        <div class="svc-offering-card reveal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <h3>Product Photography</h3>
+          <p>Crisp, highly detailed product shots that highlight textures and features to increase e-commerce sales.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2"/></svg>
+          <h3>Corporate Headshots</h3>
+          <p>Professional portraiture for your entire team that exudes confidence and aligns with your company image.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+          <h3>Event Coverage</h3>
+          <p>Comprehensive photo documentation of your corporate events, capturing candid moments and key highlights.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+          <h3>Lifestyle & Brand Photography</h3>
+          <p>Authentic visual storytelling featuring models and settings that embody your brand's lifestyle.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          <h3>Food & Restaurant Photography</h3>
+          <p>Mouth-watering imagery crafted to make your culinary creations shine on menus and social media.</p>
+        </div>
+        <div class="svc-offering-card reveal stagger-5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <h3>Real Estate Photography</h3>
+          <p>Stunning architectural shots with perfect lighting to showcase properties at their absolute best.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-process-section section-darker">
+      <div class="section-header reveal">
+        <h2 class="section-title">Our Process</h2>
+      </div>
+      <div class="svc-process-timeline">
+        <div class="svc-process-step reveal">
+          <div class="step-num">01</div>
+          <h4>Consultation & Planning</h4>
+          <p>We discuss your vision, required shot list, styling needs, and logistics to ensure a smooth shoot.</p>
+        </div>
+        <div class="svc-process-step reveal stagger-1">
+          <div class="step-num">02</div>
+          <h4>Location & Setup</h4>
+          <p>Scouting the perfect setting and configuring professional studio lighting to set the exact mood.</p>
+        </div>
+        <div class="svc-process-step reveal stagger-2">
+          <div class="step-num">03</div>
+          <h4>Photo Shoot</h4>
+          <p>Execution of the creative plan with attention to composition, color, and natural expression.</p>
+        </div>
+        <div class="svc-process-step reveal stagger-3">
+          <div class="step-num">04</div>
+          <h4>Editing & Delivery</h4>
+          <p>Meticulous color grading and retouching, delivering final high-resolution assets ready for use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-portfolio-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">Recent Work</h2>
+      </div>
+      <div class="svc-portfolio-grid">
+        <div class="svc-portfolio-card reveal">
+          <img src="assets/portfolio/project-branding.jpg" alt="Brand Photography Project">
+        </div>
+        <div class="svc-portfolio-card reveal stagger-1">
+          <img src="assets/portfolio/hero-showcase.jpg" alt="Photography Showcase">
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-tech-section section-darker">
+      <div class="section-header reveal">
+        <h2 class="section-title">Equipment & Software</h2>
+      </div>
+      <div class="svc-tech-grid">
+        <div class="svc-tech-item reveal">Canon EOS R5</div>
+        <div class="svc-tech-item reveal">Sony A7 IV</div>
+        <div class="svc-tech-item reveal">Adobe Lightroom</div>
+        <div class="svc-tech-item reveal">Photoshop</div>
+        <div class="svc-tech-item reveal">Capture One</div>
+        <div class="svc-tech-item reveal">Studio Lighting</div>
+      </div>
+    </section>
+
+    <section class="svc-advantages-section">
+      <div class="section-header reveal">
+        <h2 class="section-title">Why Choose Knootix</h2>
+      </div>
+      <div class="svc-advantages-grid">
+        <div class="svc-advantage-card reveal">
+          <h3 class="accent">Professional Equipment</h3>
+          <p>We use top-tier camera bodies and elite lenses to capture uncompromising detail and dynamic range.</p>
+        </div>
+        <div class="svc-advantage-card reveal stagger-1">
+          <h3 class="accent">Magazine-Quality Retouching</h3>
+          <p>Our post-processing eliminates distractions and enhances colors, giving your images a premium polish.</p>
+        </div>
+        <div class="svc-advantage-card reveal stagger-2">
+          <h3 class="accent">Quick Delivery</h3>
+          <p>Optimized workflows mean you receive your final, fully edited images without unnecessary delays.</p>
+        </div>
+        <div class="svc-advantage-card reveal stagger-3">
+          <h3 class="accent">On-Location & Studio</h3>
+          <p>Whether you need our controlled studio environment or an on-site corporate shoot, we've got you covered.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-faq-section section-darker">
+      <div class="section-header reveal">
+        <h2 class="section-title">FAQs</h2>
+      </div>
+      <div class="faq-container">
+        <div class="svc-faq-item reveal" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>How long does a shoot typically take?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Shoot duration varies wildly based on scope. Simple headshots can take 1-2 hours, while comprehensive product catalogs or full-day events require custom scheduling.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-1" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>How many photos will I receive?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>This is determined during the planning phase. We prefer quality over quantity, delivering a precise selection of top-tier, fully retouched images as agreed upon.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-2" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Is retouching included?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Yes, all final delivered images include professional color correction and standard retouching to ensure a flawless finish.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-3" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Do you provide props or styling?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>We have an assortment of standard studio props, but for specific brand styling (like unique food ingredients or lifestyle artifacts), we coordinate with you beforehand.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-4" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Do I get commercial usage rights?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Absolutely. For all corporate and commercial shoots, full usage rights are included so you can utilize the assets freely across ads, web, and print.</p>
+          </div>
+        </div>
+        <div class="svc-faq-item reveal stagger-5" onclick="this.classList.toggle('active')">
+          <div class="svc-faq-question">
+            <span>Do you travel for shoots?</span>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+          <div class="svc-faq-answer">
+            <p>Yes, we are based in Lahore but can travel nationally and internationally for assignments. Travel expenses are calculated transparently during quoting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="svc-cta-section">
+      <div class="cta-content reveal">
+        <h2>Ready to capture your brand's essence?</h2>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn-primary">Book a Consultation →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <h3>Stay in the loop</h3>
+          <p>Get design insights, project showcases, and industry trends delivered to your inbox.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/knootix-logo.png" alt="Knootix" class="site-logo site-logo--light" />
+          <img src="assets/knootix-logo-dark.png" alt="Knootix" class="site-logo site-logo--dark" />
+          <p>Bold creative work for brands that refuse to be ordinary. Based in Lahore, working worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service-video-editing.html">Video Editing</a></li>
+            <li><a href="service-graphic-design.html">Graphic Design</a></li>
+            <li><a href="service-web-development.html">Web Development</a></li>
+            <li><a href="service-photography.html">Photography</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="work.html">Our Work</a></li>
+            <li><a href="reviews.html">Testimonials</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:knootix@gmail.com">Email Us</a></li>
+            <li><a href="https://instagram.com/knootix" target="_blank">Instagram</a></li>
+            <li><a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 <span class="accent">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com/knootix" target="_blank" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
+          <a href="mailto:knootix@gmail.com" class="social-link"><svg class="svg-icon" viewBox="0 0 24 24"><use href="#icon-mail"></use></svg></a>
+          <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="social-link">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/923414680668?text=Hello%20Knootix!" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+      <div class="wa-pulse"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.115 1.535 5.836L.057 23.215a.75.75 0 0 0 .916.932l5.546-1.454A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.663-.518-5.178-1.42l-.369-.217-3.833 1.006 1.026-3.738-.237-.386A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
