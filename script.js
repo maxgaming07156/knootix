@@ -435,22 +435,26 @@ function initThreeJSHero() {
       return optionalTarget.set(x, y, z);
     }
   }
-  const path = new InfinityCurve(14);
-  const geometry = new THREE.TubeGeometry(path, 150, 1.2, 16, true);
+  const path = new InfinityCurve(45);
+  const geometry = new THREE.TubeGeometry(path, 200, 1.5, 16, true);
   
   // Material: Wireframe with Knootix Accent
   const material = new THREE.MeshBasicMaterial({ 
     color: 0x4db88a, 
     wireframe: true,
     transparent: true,
-    opacity: 0.2
+    opacity: 0.35
   });
   const infinityMesh = new THREE.Mesh(geometry, material);
   
-  // Position it to the right
-  infinityMesh.position.x = 15;
+  // Position it behind the laptop, nicely centered
+  infinityMesh.position.x = 0;
   infinityMesh.position.y = 0;
-  infinityMesh.position.z = -20;
+  infinityMesh.position.z = -40;
+  
+  // Initial tilt for a better 3D perspective
+  infinityMesh.rotation.x = 0.3;
+  infinityMesh.rotation.y = 0.4;
   
   scene.add(infinityMesh);
   camera.position.z = 10;
