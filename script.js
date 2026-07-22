@@ -49,15 +49,16 @@ function closeMobileMenu() {
 }
 
 // --- Active Nav Link ---
-(function() {
+function updateActiveNavLink() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
+    link.classList.remove('active');
     const href = link.getAttribute('href');
-    if (href === currentPage) {
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
-})();
+}
 
 // --- Navbar Scroll Effects ---
 (function() {
@@ -478,6 +479,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initThreeJSHero();
   handleScroll();
   initCounters();
+  updateActiveNavLink();
 
   // Initialize Swup
   if (typeof Swup !== 'undefined') {
@@ -489,6 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
       initThreeJSHero();
       handleScroll();
       initCounters();
+      updateActiveNavLink();
       
       window.scrollTo(0, 0);
     });
