@@ -77,7 +77,7 @@ function closeMobileMenu() {
 })();
 
 // --- Scroll Reveal (Enhanced) ---
-(function() {
+function handleScroll() {
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   if (!revealElements.length) return;
 
@@ -94,7 +94,7 @@ function closeMobileMenu() {
   });
 
   revealElements.forEach(el => observer.observe(el));
-})();
+}
 
 // --- Counter Animation ---
 function animateCount(el, target, suffix = '') {
@@ -123,7 +123,7 @@ function animateCount(el, target, suffix = '') {
 }
 
 // Trigger counters on scroll
-(function() {
+function initCounters() {
   const counters = document.querySelectorAll('[data-target]');
   if (!counters.length) return;
 
@@ -140,7 +140,7 @@ function animateCount(el, target, suffix = '') {
   }, { threshold: 0.3 });
 
   counters.forEach(el => counterObserver.observe(el));
-})();
+}
 
 // --- Mouse Parallax (Hero) ---
 (function() {
@@ -476,6 +476,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial load
   initMagneticButtons();
   initThreeJSHero();
+  handleScroll();
+  initCounters();
 
   // Initialize Swup
   if (typeof Swup !== 'undefined') {
@@ -485,11 +487,8 @@ document.addEventListener("DOMContentLoaded", () => {
     swup.hooks.on('page:view', () => {
       initMagneticButtons();
       initThreeJSHero();
-      
-      // Re-trigger scroll reveal animations
-      if (typeof handleScroll === 'function') {
-        handleScroll();
-      }
+      handleScroll();
+      initCounters();
       
       window.scrollTo(0, 0);
     });
