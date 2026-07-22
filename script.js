@@ -408,11 +408,18 @@ function initMagneticButtons() {
 // ============================================
 // THREE.JS HERO CANVAS
 // ============================================
+let threeJSAnimationId = null;
+let threeJSMouseHandler = null;
+let threeJSResizeHandler = null;
+
 function initThreeJSHero() {
+  // Cleanup previous instance to prevent Swup memory leaks
+  if (threeJSAnimationId) cancelAnimationFrame(threeJSAnimationId);
+  if (threeJSMouseHandler) document.removeEventListener('mousemove', threeJSMouseHandler);
+  if (threeJSResizeHandler) window.removeEventListener('resize', threeJSResizeHandler);
+  
   const canvas = document.getElementById('hero-3d');
   if (!canvas) return; // Only runs on pages with the hero canvas
-  if (canvas.dataset.initialized) return; // Prevent double initialization
-  canvas.dataset.initialized = 'true';
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -464,13 +471,14 @@ function initThreeJSHero() {
   let targetX = 0;
   let targetY = 0;
 
-  document.addEventListener('mousemove', (e) => {
+  threeJSMouseHandler = (e) => {
     mouseX = (e.clientX - window.innerWidth / 2);
     mouseY = (e.clientY - window.innerHeight / 2);
-  });
+  };
+  document.addEventListener('mousemove', threeJSMouseHandler);
 
   function animate() {
-    requestAnimationFrame(animate);
+    threeJSAnimationId = requestAnimationFrame(animate);
     
     infinityMesh.rotation.x += 0.002;
     infinityMesh.rotation.y += 0.003;
@@ -486,11 +494,12 @@ function initThreeJSHero() {
   
   animate();
 
-  window.addEventListener('resize', () => {
+  threeJSResizeHandler = () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-  });
+  };
+  window.addEventListener('resize', threeJSResizeHandler);
 }
 
 // ============================================
