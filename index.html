@@ -45,6 +45,7 @@
         </div>
       </div>
     </nav>
+    <main id="swup" class="transition-fade">
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
@@ -60,6 +61,7 @@
 
     <!-- ============ HERO ============ -->
     <section id="hero">
+      <canvas id="hero-3d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
 
@@ -74,8 +76,8 @@
           From pixel-perfect design to powerful web solutions — Knootix transforms ideas into impactful digital realities that elevate brands worldwide.
         </p>
         <div class="hero-actions">
-          <a href="work.html" class="btn-primary">View Our Work →</a>
-          <a href="contact.html" class="btn-ghost">Start a Project</a>
+          <a href="work.html" class="btn-primary magnetic">View Our Work →</a>
+          <a href="contact.html" class="btn-ghost magnetic">Start a Project</a>
         </div>
         <div class="hero-metrics">
           <div class="metric">
@@ -478,13 +480,14 @@
         <h2>Ready to build something <span class="accent">extraordinary</span>?</h2>
         <p>Let's discuss your next project. From initial concept to final launch, we'll bring your vision to life with premium creative and technical expertise.</p>
         <div class="cta-buttons">
-          <a href="contact.html" class="btn-primary">Start a Project →</a>
-          <a href="work.html" class="btn-ghost">Explore Our Work</a>
+          <a href="contact.html" class="btn-primary magnetic">Start a Project →</a>
+          <a href="work.html" class="btn-ghost magnetic">Explore Our Work</a>
         </div>
       </div>
     </section>
 
     <!-- ============ FOOTER ============ -->
+    </main>
     <footer>
       <div class="footer-top">
         <div class="footer-newsletter">
@@ -560,6 +563,8 @@
       </svg>
     </a>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/swup@4"></script>
     <script src="script.js"></script>
   </body>
 </html>

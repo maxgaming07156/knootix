@@ -372,3 +372,126 @@ document.addEventListener("DOMContentLoaded", () => {
 
   requestAnimationFrame(raf)
 });
+
+// ============================================
+// MAGNETIC BUTTONS
+// ============================================
+function initMagneticButtons() {
+  const magnets = document.querySelectorAll('.magnetic');
+  
+  magnets.forEach((magnet) => {
+    magnet.addEventListener('mousemove', function(e) {
+      const position = magnet.getBoundingClientRect();
+      const x = e.pageX - position.left - position.width / 2;
+      const y = e.pageY - window.scrollY - position.top - position.height / 2;
+      
+      // Move element slightly based on cursor position
+      magnet.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+
+    magnet.addEventListener('mouseout', function(e) {
+      magnet.style.transform = 'translate(0px, 0px)';
+      magnet.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    });
+
+    magnet.addEventListener('mouseenter', function(e) {
+      magnet.style.transition = 'none'; // Remove transition during hover for instant sticking
+    });
+  });
+}
+
+// ============================================
+// THREE.JS HERO CANVAS
+// ============================================
+function initThreeJSHero() {
+  const canvas = document.getElementById('hero-3d');
+  if (!canvas) return; // Only runs on pages with the hero canvas
+  if (canvas.dataset.initialized) return; // Prevent double initialization
+  canvas.dataset.initialized = 'true';
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+  
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Geometry: Torus Knot
+  const geometry = new THREE.TorusKnotGeometry(12, 3, 100, 16);
+  // Material: Wireframe with Knootix Accent
+  const material = new THREE.MeshBasicMaterial({ 
+    color: 0x4db88a, 
+    wireframe: true,
+    transparent: true,
+    opacity: 0.15
+  });
+  const torusKnot = new THREE.Mesh(geometry, material);
+  
+  // Position it to the right
+  torusKnot.position.x = 15;
+  torusKnot.position.y = 0;
+  torusKnot.position.z = -20;
+  
+  scene.add(torusKnot);
+  camera.position.z = 10;
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let targetX = 0;
+  let targetY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX - window.innerWidth / 2);
+    mouseY = (e.clientY - window.innerHeight / 2);
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    
+    torusKnot.rotation.x += 0.002;
+    torusKnot.rotation.y += 0.003;
+
+    targetX = mouseX * 0.001;
+    targetY = mouseY * 0.001;
+    
+    torusKnot.rotation.x += 0.05 * (targetY - torusKnot.rotation.x);
+    torusKnot.rotation.y += 0.05 * (targetX - torusKnot.rotation.y);
+
+    renderer.render(scene, camera);
+  }
+  
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+}
+
+// ============================================
+// SWUP PAGE TRANSITIONS & LIFECYCLE
+// ============================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Initial load
+  initMagneticButtons();
+  initThreeJSHero();
+
+  // Initialize Swup
+  if (typeof Swup !== 'undefined') {
+    const swup = new Swup();
+
+    // Re-run scripts on page transition
+    swup.hooks.on('page:view', () => {
+      initMagneticButtons();
+      initThreeJSHero();
+      
+      // Re-trigger scroll reveal animations
+      if (typeof handleScroll === 'function') {
+        handleScroll();
+      }
+      
+      window.scrollTo(0, 0);
+    });
+  }
+});
