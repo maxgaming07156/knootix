@@ -50,11 +50,15 @@ function closeMobileMenu() {
 
 // --- Active Nav Link ---
 function updateActiveNavLink() {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  let currentPage = window.location.pathname.split('/').pop();
+  // Strip .html for robust comparison
+  currentPage = currentPage.replace('.html', '');
+  if (!currentPage) currentPage = 'index';
+
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.classList.remove('active');
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    let href = link.getAttribute('href').replace('.html', '');
+    if (href === currentPage || (currentPage === '' && href === 'index')) {
       link.classList.add('active');
     }
   });
